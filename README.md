@@ -1,2 +1,2 @@
-# byoigres.github.io
+# byoigres-byoigres.github.io
 Source code of https://byoigres.com
