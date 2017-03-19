@@ -1,0 +1,17 @@
+<div class="navbar-container">
+    <h1 class="logo">Sergio Flores</h1>
+    <ul class="navbar">
+        <li>
+            <a href="/">Inicio</a>
+        </li>
+        <li>
+            <a href="{{ "/blog/" | prepend: site.baseurl }}">Blog</a>
+        </li>
+        <li>
+            <a href="{{ "/about/" | prepend: site.baseurl }}">Acerca de mi</a>
+        </li>
+    </ul>
+    <div class="subscribe-text">
+        Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+    </div>
+</div>

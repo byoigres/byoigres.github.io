@@ -1,0 +1,121 @@
+/* Local imports */
+@import 'vendor/colors';
+@import 'vendor/normalize';
+@import 'vendor/highlight/native';
+
+/* Webfonts */
+/* @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Source+Sans+Pro:400,700|Bangers); */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,700|Yellowtail');
+
+/* Vairables */
+:root {
+  --header-font-family: "Oswald";
+  --body-font-family: "Raleway";
+  --logo-font-family: "Yellowtail";
+  --navbar-width: 16rem;
+  --side-padding: 2rem;
+  --content-max-width: calc(75rem - var(--navbar-width));
+}
+
+/* HTML Tags */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--grey-100);
+  font-family: var(--body-font-family);
+  line-height: 1.5rem;
+}
+
+a {
+  color: var(--dark-black);
+  transition: color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--light-black);
+  }
+}
+
+h1, h2 {
+  font-family: var(--header-font-family);
+  line-height: 2.5rem;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+/* Classes */
+.content {
+    margin-left: 16rem;
+  padding: 0 var(--side-padding);
+  overflow: hidden;
+  max-width: var(--content-max-width);
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16rem;
+  background-color: var(--indigo-500);
+  text-align: center;
+  color: var(--white);
+
+  & a {
+    color: var(--white);
+
+    &:hover {
+      color: var(--light-white);
+      text-decoration: none;
+    }
+  }
+
+  & .navbar {
+    list-style: none;
+    padding: 0;
+
+    & li {
+      padding: 0.3rem 0;
+
+      & a {
+        font-size: 1.3rem;
+        color: var(--dark-white);
+        transition: font-style 0.5s;
+
+        &:hover {
+          color: var(--light-white);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  & .subscribe-text {
+    font-size: 0.9rem;
+  }
+}
+
+.center-image {
+  text-align: center;
+}
+
+.header {
+  font-size: 2.3rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.3rem;
+  font-family: var(--logo-font-family);
+  text-align: center;
+  color: var(--white);
+}

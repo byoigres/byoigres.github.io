@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "description": "Blog for byoigres.com",
+  "main": "index.js",
+  "repository": "git@github.com:byoigres/blog.git",
+  "author": "Sergio Flores <byoigres@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --colors --progress",
+    "dev": "webpack-dev-server --progress"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.17.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.3.3",
+    "style-loader": "^0.14.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {}
+}

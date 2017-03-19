@@ -1,14 +1,13 @@
 ---
 layout: post
 title: "Utiliza npm v3.x sin la barra de progreso y obtendrás una instalación más rápida"
+date: 2016-01-27 13:02:00
 categories: npm node bugs
 author: sergio
 ---
 
-{:refdef: style="text-align: center;"}
+{: .center-image}
 ![No es margin ni padding]({{ "/images/posts/npm-progress-bar-twitter.png" | prepend: site.baseurl }})
-
-{: refdef}
 
 Cada que ejecutamos un comando `npm install` con la versión 3 de npm  podemos
 ver una bonita barra de progreso que nos dice el porcentaje que lleva la

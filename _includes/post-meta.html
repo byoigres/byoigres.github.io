@@ -1,0 +1,12 @@
+<p class="post-meta">
+    <time datetime="{{ include.meta.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ include.meta.date | date_to_long_string  }}
+    </time>
+    {% assign author = site.data.authors[include.meta.author] %}
+    {% if author %}
+        <span> • </span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ author.name }}</span>
+        </span>
+    {% endif %}
+</p>

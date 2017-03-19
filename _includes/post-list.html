@@ -1,0 +1,12 @@
+{% for post in site.posts %}
+  <h1>
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </h1>
+  <p>
+    {% include post-meta.html meta=post %}
+  </p>
+  <p>
+    {{ post.excerpt }}
+  </p>
+  <hr>
+{% endfor %}

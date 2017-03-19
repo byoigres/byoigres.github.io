@@ -12,7 +12,7 @@ mi presentación, todo iba marchando perfectamente hasta que gracias a la
 propiedad _box-shadow_ de un elemento _pre_ me doy cuenta que habia un espacio
 que al parecer no era _margin_ o _padding_ dentro de la etiqueta _pre_.
 
-![No es margin ni padding]({{ site.url }}/images/posts/1.png)
+![No es margin ni padding]({{ "/images/posts/1.png" | prepend: site.baseurl }})
 
 Entonces comencé a utilizar las herramientas de desarrollo de Firefox para
 eliminar todo posible margin o padding que viniera con el tema para luego hacer
