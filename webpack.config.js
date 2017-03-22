@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Webpack = require('webpack');
 
 // Webpack Plugins
@@ -5,6 +6,8 @@ const Clean = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PostcssImport = require('postcss-import');
 const PostcssExtend = require('postcss-extend');
+const PostssCustomMedia = require("postcss-custom-media")
+const PostcssMediaMinMax = require('postcss-media-minmax');
 const PostcssNext = require('postcss-cssnext');
 const path = require('path');
 const vendorDeps = require('./package').dependencies || {};
@@ -13,13 +16,14 @@ const BASE_PATH = __dirname;
 
 const { BLOG_HOST, BLOG_PORT, JEKYLL_HOST, JEKYLL_PORT } = process.env;
 const PROXY_TARGET = `http://${JEKYLL_HOST}:${JEKYLL_PORT}`;
-const PUBLIC_PATH = '/blog/assets/';
+const PUBLIC_PATH = '/assets/';
 const IS_DEBUG = process.env.NODE_ENV !== 'production';
 
 const postcssOptions = {
   plugins: () => [
     PostcssImport,
-    //PostcssExtend,
+    PostssCustomMedia(),
+    PostcssMediaMinMax(),
     /* eslint new-cap: 0*/
     PostcssNext({
       browsers: ['last 2 versions', '> 5%'],

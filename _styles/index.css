@@ -4,7 +4,8 @@
 @import 'vendor/highlight/native';
 
 /* Webfonts */
-/* @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Source+Sans+Pro:400,700|Bangers); */
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Source+Sans+Pro:400,700|Bangers);
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,700|Yellowtail');
 
 /* Vairables */
@@ -15,6 +16,12 @@
   --navbar-width: 16rem;
   --side-padding: 2rem;
   --content-max-width: calc(75rem - var(--navbar-width));
+  --navbar-background-color: var(--blue-900);
+
+  --small-viewport: 34rem;
+  --tablet-viewport: 48rem;
+  --medium-viewport: 62rem;
+  --large-viewport: 75rem;
 }
 
 /* HTML Tags */
@@ -51,25 +58,25 @@ h1, h2 {
   }
 }
 
+img {
+  width: 100%;
+}
+
 /* Classes */
 .content {
-    margin-left: 16rem;
   padding: 0 var(--side-padding);
   overflow: hidden;
   max-width: var(--content-max-width);
 }
 
 .navbar-container {
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 16rem;
-  background-color: var(--indigo-500);
-  text-align: center;
+  background-color: var(--navbar-background-color);
   color: var(--white);
 
-  & a {
+    & a {
     color: var(--white);
 
     &:hover {
@@ -114,8 +121,107 @@ h1, h2 {
 }
 
 .logo {
-  font-size: 2.3rem;
   font-family: var(--logo-font-family);
   text-align: center;
   color: var(--white);
+}
+
+/* Media Queries */
+/*
+@media (--small-viewport) {
+  .navbar-container {
+    & .navbar {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: block;
+    text-align: center;
+    margin: 0.75rem;
+    font-size: 2rem;
+  }
+}
+*/
+@media only screen and (width < 34rem) {
+  .navbar-container {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+
+    & .navbar {
+      display: none;
+    }
+
+    & .logo {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (width < 62rem) {
+  body {
+    margin-top: 4rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  .navbar-container {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+
+    & .navbar {
+      float: right;
+      margin-right: 1.12rem;
+
+      & li {
+        display: inline;
+        float: left;
+
+        & a {
+          font-size: 1rem!important;
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    margin: 1.12rem;
+    font-size: 2rem;
+  }
+
+  .highlight {
+    margin: 0;
+    & > pre {
+      padding: 0.5rem;
+    }
+  }
+
+  .subscribe-text {
+    display: none;
+  }
+}
+
+@media only screen and (width >= 62rem) {
+  .navbar-container {
+    position: fixed;
+    width: 16rem;
+    text-align: center;
+  }
+
+  .content {
+    margin-left: 16rem;
+  }
+
+  .logo {
+    font-size: 2.3rem;
+  }
 }

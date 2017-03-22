@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
     {% include head.html %}
@@ -6,5 +9,6 @@
         <div class="content">
             {{ content }}
         </div>
+        <script type="text/javascript" src="{{ "/assets/app.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>
