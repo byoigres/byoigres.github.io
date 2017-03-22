@@ -24,6 +24,7 @@ const postcssOptions = {
     PostcssImport,
     PostssCustomMedia(),
     PostcssMediaMinMax(),
+    PostcssExtend(),
     /* eslint new-cap: 0*/
     PostcssNext({
       browsers: ['last 2 versions', '> 5%'],

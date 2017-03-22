@@ -4,8 +4,11 @@ layout: compress
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body class="frontpage">
-        {{ content }}
+    <body>
+        {% include navbar.html %}
+        <div class="content">
+            {{ content }}
+        </div>
         <script type="text/javascript" src="{{ "/assets/app.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

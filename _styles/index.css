@@ -4,19 +4,18 @@
 @import 'vendor/highlight/native';
 
 /* Webfonts */
-
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Source+Sans+Pro:400,700|Bangers);
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,700|Yellowtail');
 
 /* Vairables */
 :root {
+  --primary-color-1: var(--blue-900);
   --header-font-family: "Oswald";
   --body-font-family: "Raleway";
   --logo-font-family: "Yellowtail";
   --navbar-width: 16rem;
   --side-padding: 2rem;
   --content-max-width: calc(75rem - var(--navbar-width));
-  --navbar-background-color: var(--blue-900);
+  --navbar-background-color: var(--primary-color-1);
 
   --small-viewport: 34rem;
   --tablet-viewport: 48rem;
@@ -63,6 +62,24 @@ img {
 }
 
 /* Classes */
+
+.frontpage {
+  background-color: var(--white);
+  position: relative;
+
+  & .frontpage-content {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 .content {
   padding: 0 var(--side-padding);
   overflow: hidden;
@@ -76,13 +93,17 @@ img {
   background-color: var(--navbar-background-color);
   color: var(--white);
 
-    & a {
+  & a {
     color: var(--white);
 
     &:hover {
       color: var(--light-white);
       text-decoration: none;
     }
+  }
+
+  & .hamburger {
+    display: none;
   }
 
   & .navbar {
@@ -120,93 +141,71 @@ img {
   text-align: center;
 }
 
-.logo {
+.logo-base {
   font-family: var(--logo-font-family);
   text-align: center;
   color: var(--white);
 }
 
+.logo {
+  @extend  .logo-base;
+}
+
 /* Media Queries */
-/*
-@media (--small-viewport) {
-  .navbar-container {
-    & .navbar {
-      display: none;
-    }
-  }
-
-  .logo {
-    display: block;
-    text-align: center;
-    margin: 0.75rem;
-    font-size: 2rem;
-  }
-}
-*/
-@media only screen and (width < 34rem) {
-  .navbar-container {
-    position: absolute;
-    width: 100%;
-    height: 4rem;
-
-    & .navbar {
-      display: none;
-    }
-
-    & .logo {
-      text-align: center;
-      width: 100%;
-    }
-  }
-}
 
 @media only screen and (width < 62rem) {
   body {
     margin-top: 4rem;
   }
 
-  h1 {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-  }
-
   .navbar-container {
     position: absolute;
     width: 100%;
     height: 4rem;
-    overflow: hidden;
 
     & .navbar {
-      float: right;
-      margin-right: 1.12rem;
+      position: absolute;
+      top: 3rem;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      overflow: visible;
+      border: 0.0625rem solid var(--white);
+      display: none;
+
+      &.display {
+        display: block;
+      }
 
       & li {
-        display: inline;
-        float: left;
+        display: block;
+        float: none;
+        background-color: var(--primary-color-1);
 
         & a {
+          display: block;
           font-size: 1rem!important;
-          padding: 0 0.5rem;
+          padding: 0.2rem 0;
         }
       }
     }
-  }
 
-  .logo {
-    display: inline-block;
-    margin: 1.12rem;
-    font-size: 2rem;
-  }
-
-  .highlight {
-    margin: 0;
-    & > pre {
-      padding: 0.5rem;
+    & .logo {
+      text-align: center;
+      width: 100%;
+      margin: 0.75rem 0;
     }
-  }
 
-  .subscribe-text {
-    display: none;
+    & .hamburger {
+      display: inline;
+      position: absolute;
+      top: 1.4rem;
+      right: 1rem;
+    }
+
+    & .subscribe-text {
+      display: none;
+    }
   }
 }
 
