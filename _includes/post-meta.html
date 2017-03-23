@@ -1,11 +1,32 @@
 <p class="post-meta">
     <time datetime="{{ include.meta.date | date_to_xmlschema }}" itemprop="datePublished">
+        <i class="fa fa-calendar"></i>
+        {% comment %}
         {{ include.meta.date | date_to_long_string  }}
+        {% endcomment %}
+        {{ include.meta.date | date: "%-d de"}}
+        {% assign month = include.meta.date | date: "%B" %}
+        {% case month %}
+            {% when 'January' %}{{"Enero"}}
+            {% when 'Febrary' %}{{"Febrero"}}
+            {% when 'March' %}{{"Marzo"}}
+            {% when 'April' %}{{"Abril"}}
+            {% when 'May' %}{{"Mayo"}}
+            {% when 'June' %}{{"Junio"}}
+            {% when 'July' %}{{"Julio"}}
+            {% when 'August' %}{{"Agosto"}}
+            {% when 'September' %}{{"Septiembre"}}
+            {% when 'October' %}{{"Octubre"}}
+            {% when 'November' %}{{"Noviembre"}}
+            {% when 'December' %}{{"Diciembre"}}
+        {% endcase %}
+        {{ include.meta.date | date: "de %Y"}}
     </time>
     {% assign author = site.data.authors[include.meta.author] %}
     {% if author %}
-        <span> • </span>
+        <span>  </span>
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <i class="fa fa-user"></i>
             <span itemprop="name">{{ author.name }}</span>
         </span>
     {% endif %}

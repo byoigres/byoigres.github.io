@@ -1,7 +1,7 @@
 /* Local imports */
 @import 'vendor/colors';
 @import 'vendor/normalize';
-@import 'vendor/highlight/native';
+@import 'vendor/highlight/zenburn';
 
 /* Webfonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,700|Yellowtail');

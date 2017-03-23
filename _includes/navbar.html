@@ -13,9 +13,6 @@
         <li>
             <a href="{{ "/blog/" | prepend: site.baseurl }}" class="blog-link">Blog</a>
         </li>
-        <li class="subscribe-text">
-            Suscribirse <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
-        </li>
         {% assign social = site.data.social %}
         <li class="social">
             {% for item in social %}

@@ -26,6 +26,8 @@ GEM
       listen (~> 3.0, < 3.1)
     kramdown (1.13.2)
     liquid (3.0.6)
+    liquid-md5 (0.0.3)
+      liquid (>= 2.5, < 5.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -55,6 +57,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.4.2)
   jekyll-feed (~> 0.6)
+  liquid-md5
   minima (~> 2.0)
   tzinfo-data
   wdm (>= 0.1.0)
