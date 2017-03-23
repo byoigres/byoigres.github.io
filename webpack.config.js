@@ -8,8 +8,10 @@ const PostcssImport = require('postcss-import');
 const PostcssExtend = require('postcss-extend');
 const PostssCustomMedia = require("postcss-custom-media")
 const PostcssMediaMinMax = require('postcss-media-minmax');
+const PurifyCSSPlugin = require('purifycss-webpack');
 const PostcssNext = require('postcss-cssnext');
 const path = require('path');
+const glob = require('glob');
 const vendorDeps = require('./package').dependencies || {};
 
 const BASE_PATH = __dirname;
@@ -37,8 +39,11 @@ const webpackConfig = {
   target: 'web',
   context: BASE_PATH,
   entry: {
-    app: './_styles',
-    //vendor: Object.keys(vendorDeps),
+    app: [
+      './_styles',
+      'font-awesome/css/font-awesome.min.css'
+    ],
+    // vendor: Object.keys(vendorDeps),
   },
   output: {
     path: path.join(BASE_PATH, 'assets'),
@@ -75,6 +80,47 @@ const webpackConfig = {
           },
         ],
       },
+      {
+        test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            publicPath: '/assets/',
+            mimetype: 'application/font-woff'
+          }
+        }
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            publicPath: '/assets/',
+            mimetype: 'application/octet-stream'
+          }
+        }
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/assets/'
+          }
+        }
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'image/svg+xml'
+          }
+        }
+      }
     ],
   },
   plugins: [],
@@ -160,6 +206,13 @@ if (!IS_DEBUG) {
     */
     new Clean([path.join(BASE_PATH, 'assets')]),
     new ExtractTextPlugin('styles.css'),
+    new PurifyCSSPlugin({
+      paths: glob.sync(path.join(__dirname, '_site/*.html')),
+      minimize: true,
+      purifyOptions: {
+        minify: true
+      }
+    }),
     new Webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false
