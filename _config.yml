@@ -15,7 +15,7 @@ markdown: kramdown
 #custom attreibutes
 disqus_username: byoigres
 
-destination: ./docs
+destination: ./dist
 gems:
   - jekyll-feed
   - liquid-md5
