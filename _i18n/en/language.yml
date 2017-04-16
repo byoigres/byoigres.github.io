@@ -1,0 +1,6 @@
+global:
+  spanish: Spanish
+  english: English
+navbar:
+  blog: Blog
+  projects: Projects
