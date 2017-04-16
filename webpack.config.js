@@ -46,7 +46,7 @@ const webpackConfig = {
     // vendor: Object.keys(vendorDeps),
   },
   output: {
-    path: path.join(BASE_PATH, 'assets'),
+    path: path.join(BASE_PATH, 'dist', 'assets'),
     publicPath: '/',
     filename: '[name].js',
     sourceMapFilename: '[name].map.js',
