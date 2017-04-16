@@ -179,8 +179,8 @@ img {
       width: 100%;
       text-align: center;
       overflow: visible;
-      border: 0.0625rem solid var(--white);
       display: none;
+      animation: 0.5s display;
 
       &.display {
         display: block;
