@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Acerca de mi
-permalink: /about/
+namespace: about-me
+permalink: /acerca-de-mi/
+permalink_en: /about-me/
 ---
-<h1>Sergio Flores</h1>
+
+{% tf about-me.md %}
