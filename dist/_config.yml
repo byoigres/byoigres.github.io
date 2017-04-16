@@ -1,0 +1,35 @@
+title: Sergio Flores
+email: byoigres@gmail.com
+description: "Blog personal y curiosidades de todos los días."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://byoigres.com" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /blog/:year/:month/:day/:title/
+
+languages: ["es", "en"]
+exclude_from_localizations: ["assets", "images", "_scripts", "_styles"]
+
+# Build settings
+markdown: kramdown
+# theme: minima
+
+#custom attreibutes
+disqus_username: byoigres
+
+destination: ./docs
+gems:
+  - jekyll-feed
+  - liquid-md5
+  - jekyll-multiple-languages-plugin
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - _config_dev.yml
+  - CNAME
+  - webpack.config.js
+  - packages.json
+  - node_modules
+  - yarn.lock
+  - .babelrc
+  - .editorconfig
+  - .eslintignore
+  - .eslintrc

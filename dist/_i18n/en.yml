@@ -1,0 +1,7 @@
+global:
+  spanish: Spanish
+  english: English
+navbar:
+  blog: Blog
+  projects: Projects
+  about-me: About me
