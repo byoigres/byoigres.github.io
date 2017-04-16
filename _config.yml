@@ -21,6 +21,7 @@ gems:
   - liquid-md5
   - jekyll-multiple-languages-plugin
 exclude:
+  - dist
   - Gemfile
   - Gemfile.lock
   - _config_dev.yml
@@ -33,3 +34,5 @@ exclude:
   - .editorconfig
   - .eslintignore
   - .eslintrc
+  - Procfile
+  - package.json
