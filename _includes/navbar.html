@@ -1,6 +1,6 @@
 <div class="navbar-container">
     <h1 class="logo">
-        <a href="/">Sergio Flores</a>
+        <a href="{{ "/" | prepend: site.baseurl }}">Sergio Flores</a>
     </h1>
     <span class="hamburger">
         <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -12,6 +12,12 @@
     <ul class="navbar">
         <li>
             <a href="{{ "/blog/" | prepend: site.baseurl }}" class="blog-link">Blog</a>
+        </li>
+        <li>
+            <a href="{% tl projects %}" class="blog-link">{% t navbar.projects %}</a>
+        </li>
+        <li>
+            <a href="{% tl about-me %}" class="blog-link">{% t navbar.about-me %}</a>
         </li>
         {% assign social = site.data.social %}
         <li class="social">
