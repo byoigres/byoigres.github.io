@@ -204,7 +204,7 @@ if (!IS_DEBUG) {
       },
     }),
     */
-    new Clean([path.join(BASE_PATH, 'assets')]),
+    new Clean([path.join(BASE_PATH, 'dist', 'assets')]),
     new ExtractTextPlugin('styles.css'),
     new PurifyCSSPlugin({
       paths: glob.sync(path.join(__dirname, '_site/*.html')),
