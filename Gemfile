@@ -31,5 +31,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 gem 'liquid-md5'
+<<<<<<< HEAD
 
 gem 'foreman'
+=======
+>>>>>>> de94093d6a6e48d1d71968569b8116bedbbba335

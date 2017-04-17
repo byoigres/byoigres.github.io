@@ -6,8 +6,11 @@ GEM
     colorator (1.1.0)
     ffi (1.9.18)
     ffi (1.9.18-x64-mingw32)
+<<<<<<< HEAD
     foreman (0.84.0)
       thor (~> 0.19.1)
+=======
+>>>>>>> de94093d6a6e48d1d71968569b8116bedbbba335
     forwardable-extended (2.6.0)
     jekyll (3.4.2)
       addressable (~> 2.4)
@@ -47,7 +50,10 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
+<<<<<<< HEAD
     thor (0.19.4)
+=======
+>>>>>>> de94093d6a6e48d1d71968569b8116bedbbba335
     thread_safe (0.3.6)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -59,7 +65,10 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+<<<<<<< HEAD
   foreman
+=======
+>>>>>>> de94093d6a6e48d1d71968569b8116bedbbba335
   jekyll (= 3.4.2)
   jekyll-feed (~> 0.6)
   jekyll-multiple-languages-plugin
