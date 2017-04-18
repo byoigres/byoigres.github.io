@@ -51,7 +51,7 @@ blockquote {
   margin: 0;
 }
 
-a {
+a:not(.post-link) {
   color: var(--primary-color-1);
   transition: color 0.3s;
   text-decoration: none;
@@ -107,27 +107,28 @@ pre > code {
 }
 
 /* Classes */
-/*
-blockquote.disclaimer {
-  padding: 0 1rem;
-  color: white;
-  text-align: center;
-  background-color: #ff5722;
-  border: 1px dashed black;
-
-  & p {
-    font-style: italic;
-  }
-}
-*/
 
 .disclaimer {
   padding: 1rem 1.25rem;
   color: white;
   text-align: center;
-  background-color: #ff5722;
+  background-color: var(--deep-orange-500);
   border-radius: 0.3125rem;
-  /*border: 1px dashed black;*/
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--deep-orange-700);
+  }
+
+  transition: all 0.5s;
+
+  & .disclaimer-message {
+    display: none;
+
+    & p {
+      margin: 0.5rem 1rem 0;
+    }
+  }
 }
 
 .frontpage {
