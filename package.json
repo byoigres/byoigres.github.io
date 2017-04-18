@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --colors --progress",
-    "dev": "cross-env BLOG_HOST=0.0.0.0 BLOG_PORT=4001 JEKYLL_PORT=4000 JEKYLL_HOST=0.0.0.0 webpack-dev-server --progress"
+    "dev": "cross-env BLOG_HOST=localhost BLOG_PORT=4001 JEKYLL_PORT=4000 JEKYLL_HOST=localhost webpack-dev-server --progress"
   },
   "devDependencies": {
     "clean-webpack-plugin": "0.1.16",
