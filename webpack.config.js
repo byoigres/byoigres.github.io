@@ -207,6 +207,7 @@ if (!IS_DEBUG) {
     */
     new Clean([OUTPUT_PATH]),
     new ExtractTextPlugin('styles.css'),
+    /*
     new PurifyCSSPlugin({
       paths: glob.sync(path.join(__dirname, 'dist/*.html')),
       minimize: true,
@@ -214,6 +215,7 @@ if (!IS_DEBUG) {
         minify: true
       }
     }),
+    */
     new Webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false
