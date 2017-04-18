@@ -19,6 +19,7 @@ const BASE_PATH = __dirname;
 const { BLOG_HOST, BLOG_PORT, JEKYLL_HOST, JEKYLL_PORT } = process.env;
 const PROXY_TARGET = `http://${JEKYLL_HOST}:${JEKYLL_PORT}`;
 const PUBLIC_PATH = '/assets/';
+const OUTPUT_PATH = path.join(BASE_PATH, 'dist', 'assets');
 const IS_DEBUG = process.env.NODE_ENV !== 'production';
 
 const postcssOptions = {
@@ -46,7 +47,7 @@ const webpackConfig = {
     // vendor: Object.keys(vendorDeps),
   },
   output: {
-    path: path.join(BASE_PATH, 'dist', 'assets'),
+    path: OUTPUT_PATH,
     publicPath: '/',
     filename: '[name].js',
     sourceMapFilename: '[name].map.js',
@@ -204,8 +205,9 @@ if (!IS_DEBUG) {
       },
     }),
     */
-    new Clean([path.join(BASE_PATH, 'dist', 'assets')]),
+    new Clean([OUTPUT_PATH]),
     new ExtractTextPlugin('styles.css'),
+    /*
     new PurifyCSSPlugin({
       paths: glob.sync(path.join(__dirname, '_site/*.html')),
       minimize: true,
@@ -213,6 +215,7 @@ if (!IS_DEBUG) {
         minify: true
       }
     }),
+    */
     new Webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false

@@ -7,11 +7,12 @@
   "author": "Sergio Flores <byoigres@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack --colors --progress",
-    "dev": "webpack-dev-server --progress"
+    "build": "cross-env NODE_ENV=production webpack --colors --progress",
+    "dev": "cross-env BLOG_HOST=0.0.0.0 BLOG_PORT=4001 JEKYLL_PORT=4000 JEKYLL_HOST=0.0.0.0 webpack-dev-server --progress"
   },
   "devDependencies": {
     "clean-webpack-plugin": "0.1.16",
+    "cross-env": "^4.0.0",
     "css-loader": "0.27.3",
     "dotenv": "4.0.0",
     "eslint": "3.17.1",
