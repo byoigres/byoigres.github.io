@@ -6,13 +6,13 @@ categories: css html tips
 author: sergio
 ---
 
-This morning when I was trying to edit some slides using [reveal.js] I started to add the pretty [Monokai] style that [SublimeText] uses, everything was doing well until thanks to _box-shadow_ property of an _pre_ element I noticed some kind of space that wasn't a _margin_ or _padding_ inside _pre_ tag.
+This morning when I was trying to edit some slides using [reveal.js] I started to add the pretty [Monokai] style that [SublimeText] uses, everything was doing well until thanks to `box-shadow` property of an _pre_ element I noticed some kind of space that wasn't a `margin` or `padding` inside `pre` tag.
 
 ![There isn't margin or padding]({{ "/images/posts/1.png" | prepend: site.baseurl_root }})
 
-Then I started to `debug` the styles using Firefox devtools to remove all posible margin or padding comming with the template to make the change in the stylesheets later. `Margin`, `padding`, `border`, `line-height`, any of them didn't make that strange space disappear, that annoying space was still right there.
+Then I started to debug the styles using Firefox devtools to remove all posible `margin` or `padding` comming with the template to make the change in the stylesheets later. `margin`, `padding`, `border`, `line-height`, any of them didn't make that strange space disappear, that annoying space was still right there.
 
-After 30 minutes trying to delete every posible style to know what was that space I decided to google what was happening when a _code_ tag is inside a _pre_ tag and what I found it could be funny and stupid at the same time because programmers often forgot to read the documentation before using something. After knowing what was really happening everything makes so more sense and was logic.
+After 30 minutes trying to delete every posible style to know what was that space I decided to google what was happening when a `code` tag is inside a `pre` one and what I found it could be funny and stupid at the same time because programmers often forgot to read the documentation before using something. After knowing what was really happening everything makes so more sense and was logic.
 
 This is the code I was using in the slides:
 
@@ -34,7 +34,7 @@ $variable = "2.- Hello PHP";
 </pre>
 {% endhighlight %}
 
-If you take a closer look you'll notice that I used a `line-break` and some spaces between _pre_ and _code_ tags for readability. Actually the `line-break` doesn't matter but the spaces does and acording to [MDN] what really happens with the _pre_ tag is:
+If you take a closer look you'll notice that I used a line-break and some spaces between `pre` and `code` tags for readability. Actually the line-break doesn't matter but the spaces does and acording to [MDN] what really happens with the `pre` tag is:
 
 > The HTML Preformatted Text (&lt;pre&gt;) represents preformatted text. Text within
 this element is typically displayed in a non-proportional font exactly as it is

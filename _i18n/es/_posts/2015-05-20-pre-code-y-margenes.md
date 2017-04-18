@@ -9,19 +9,19 @@ author: sergio
 Hoy por la mañana, al estár editando una presentación utilizando [reveal.js] me
 di a la tarea de agregar el bonito estilo [Monokai] que utiliza [SublimeText] a
 mi presentación, todo iba marchando perfectamente hasta que gracias a la
-propiedad _box-shadow_ de un elemento _pre_ me doy cuenta que habia un espacio
-que al parecer no era _margin_ o _padding_ dentro de la etiqueta _pre_.
+propiedad `box-shadow` de un elemento `pre` me doy cuenta que habia un espacio
+que al parecer no era `margin` o `padding` dentro de la etiqueta `pre`.
 
 ![No es margin ni padding]({{ "/images/posts/1.png" | prepend: site.baseurl }})
 
 Entonces comencé a utilizar las herramientas de desarrollo de Firefox para
-eliminar todo posible margin o padding que viniera con el tema para luego hacer
-el cambio en las hojas de estilo. `Margin`, `padding`, `border`, `line-height` ¡nada
+eliminar todo posible `margin` o `padding` que viniera con el tema para luego hacer
+el cambio en las hojas de estilo. `margin`, `padding`, `border`, `line-height` ¡nada
 funcionaba!, ese maldito espacio aún seguia ahí.
 
 Después de unos 30 minutos tratando de eliminar todos los estilos del sitio para
 saber que era ese espacio tuve que recurrir a [googlear] que pasaba cuando se
-utiliza una etiqueta _code_ dentro de una etiqueta _pre_ y lo que me encontré
+utiliza una etiqueta `code` dentro de una etiqueta `pre` y lo que me encontré
 es para tomarlo con gracia por ser algo tan simple pero a la vez es muy
 interesante saber que comportamiento tienen las etiquetas ya que después de saber
 la razón de por que aparecian esos espacios todo era mas lógico.
@@ -47,9 +47,9 @@ $variable = "2.- Hello PHP";
 {% endhighlight %}
 
 Si se dan cuenta, para cuestiones de una mejor lectura del código utilizé un
-salto de linea entre las etiquetas _pre_ y _code_ tanto al abrilas como al
+salto de linea entre las etiquetas `pre` y `code` tanto al abrilas como al
 cerrarlas. En realidad el salto de línea no importa, lo que si importa son los
-espacios que utilizé para indentar el bloque de la etiqueta _pre_ y de acuerdo a
+espacios que utilizé para indentar el bloque de la etiqueta `pre` y de acuerdo a
 [MDN] la etiqueta _pre_ hace lo siguiente:
 
 > The HTML Preformatted Text (&lt;pre&gt;) represents preformatted text. Text within
