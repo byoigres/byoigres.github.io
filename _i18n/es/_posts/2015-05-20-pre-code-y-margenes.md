@@ -16,7 +16,7 @@ que al parecer no era _margin_ o _padding_ dentro de la etiqueta _pre_.
 
 Entonces comencé a utilizar las herramientas de desarrollo de Firefox para
 eliminar todo posible margin o padding que viniera con el tema para luego hacer
-el cambio en las hojas de estilo. Margin, padding, border, line-height ¡nada
+el cambio en las hojas de estilo. `Margin`, `padding`, `border`, `line-height` ¡nada
 funcionaba!, ese maldito espacio aún seguia ahí.
 
 Después de unos 30 minutos tratando de eliminar todos los estilos del sitio para

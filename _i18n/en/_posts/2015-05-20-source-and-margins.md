@@ -6,27 +6,15 @@ categories: css html tips
 author: sergio
 ---
 
-Hoy por la mañana, al estár editando una presentación utilizando [reveal.js] me
-di a la tarea de agregar el bonito estilo [Monokai] que utiliza [SublimeText] a
-mi presentación, todo iba marchando perfectamente hasta que gracias a la
-propiedad _box-shadow_ de un elemento _pre_ me doy cuenta que habia un espacio
-que al parecer no era _margin_ o _padding_ dentro de la etiqueta _pre_.
+This morning when I was trying to edit some slides using [reveal.js] I started to add  the prety [Monokai] style that [SublimeText] uses, everything was doing well until thanks to _box-shadow_ property of an _pre_ element I noticed some kind of space that wasn't a _margin_ or _padding_ inside _pre_ tag.
 
-![No es margin ni padding]({{ "/images/posts/1.png" | prepend: site.baseurl_root }})
+![There isn't margin nor padding]({{ "/images/posts/1.png" | prepend: site.baseurl_root }})
 
-Entonces comencé a utilizar las herramientas de desarrollo de Firefox para
-eliminar todo posible margin o padding que viniera con el tema para luego hacer
-el cambio en las hojas de estilo. Margin, padding, border, line-height ¡nada
-funcionaba!, ese maldito espacio aún seguia ahí.
+Then I started to `debug` the styles using Firefox devtools to remove all posible margin or padding comming with the template to make the change in the stylesheets later. `Margin`, `padding`, `border`, `line-height`, any of them make that strange space disapear, that anoying space was still right there.
 
-Después de unos 30 minutos tratando de eliminar todos los estilos del sitio para
-saber que era ese espacio tuve que recurrir a [googlear] que pasaba cuando se
-utiliza una etiqueta _code_ dentro de una etiqueta _pre_ y lo que me encontré
-es para tomarlo con gracia por ser algo tan simple pero a la vez es muy
-interesante saber que comportamiento tienen las etiquetas ya que después de saber
-la razón de por que aparecian esos espacios todo era mas lógico.
+After 30 minutes trying to delete every posible style to know what was that space I decided to google what was happening when a _code_ tag is inside a _pre_ tag and what I found it could be funny and stupid at the same time because programmers often forgot to read the documentation before using something. After knowing what was really happening everything makes so more sense and was logic.
 
-El código que estaba utlizando era el siguiente:
+This is the code I was using in the slides:
 
 {% highlight html %}
 <pre>
@@ -46,19 +34,13 @@ $variable = "2.- Hello PHP";
 </pre>
 {% endhighlight %}
 
-Si se dan cuenta, para cuestiones de una mejor lectura del código utilizé un
-salto de linea entre las etiquetas _pre_ y _code_ tanto al abrilas como al
-cerrarlas. En realidad el salto de línea no importa, lo que si importa son los
-espacios que utilizé para indentar el bloque de la etiqueta _pre_ y de acuerdo a
-[MDN] la etiqueta _pre_ hace lo siguiente:
+If you take a closer look you'll notice that I used a `line-break` and some spaces between _pre_ and _code_ tags for readability. Actually the `line-break` doesn't matter but the spaces does and acording to [MDN] what really happens with the _pre_ tag is:
 
 > The HTML Preformatted Text (&lt;pre&gt;) represents preformatted text. Text within
 this element is typically displayed in a non-proportional font exactly as it is
 laid out in the file. **Whitespaces inside this element are displayed as typed**.
 
-Entonces, creo que con eso queda claro, olvidense de indentar esa etiqueta y eliminen
-todos esos molestos espacios que hay entre cada una de ellas.
-
+So, I guess this is crystal clear now, forget to indent _pre_ tag and delete all the those spaces inside it.
 
 {% highlight html %}
 <pre><code data-trim class="php5">
@@ -72,6 +54,5 @@ echo "Hello world!";
 
 [reveal.js]: http://lab.hakim.se/reveal-js
 [Monokai]: https://github.com/isagalaev/highlight.js/blob/master/src/styles/monokai_sublime.css
-[googlear]: https://es.wikipedia.org/wiki/Googlear
 [SublimeText]: http://www.sublimetext.com/
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre

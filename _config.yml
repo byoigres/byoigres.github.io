@@ -6,7 +6,14 @@ url: "https://byoigres.com" # the base hostname & protocol for your site, e.g. h
 permalink: /blog/:year/:month/:day/:title/
 
 languages: ["es", "en"]
-exclude_from_localizations: ["assets", "images", "_scripts", "_styles"]
+exclude_from_localizations:
+  - assets
+  - images
+  - _scripts
+  - _styles
+  - CNAME
+  - README.md
+  - LICENSE
 
 # Build settings
 markdown: kramdown

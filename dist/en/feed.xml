@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="https://byoigres.com/en/feed.xml" rel="self" type="application/atom+xml" /><link href="https://byoigres.com/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2017-04-17T19:21:16-06:00</updated><id>https://byoigres.com/en/</id><title type="html">Sergio Flores</title><subtitle>Blog personal y curiosidades de todos los días.</subtitle><entry><title type="html">Use npm v3.x without progress bar and you’ll get a faster instalation</title><link href="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/" rel="alternate" type="text/html" title="Use npm v3.x without progress bar and  you'll get a faster instalation" /><published>2016-01-27T06:02:00-07:00</published><updated>2016-01-27T06:02:00-07:00</updated><id>https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation</id><content type="html" xml:base="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/">&lt;p class=&quot;center-image&quot;&gt;&lt;img src=&quot;/images/posts/npm-progress-bar-twitter.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="https://byoigres.com/en/feed.xml" rel="self" type="application/atom+xml" /><link href="https://byoigres.com/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2017-04-18T01:49:41-06:00</updated><id>https://byoigres.com/en/</id><title type="html">Sergio Flores</title><subtitle>Blog personal y curiosidades de todos los días.</subtitle><entry><title type="html">Use npm v3.x without progress bar and you’ll get a faster instalation</title><link href="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/" rel="alternate" type="text/html" title="Use npm v3.x without progress bar and  you'll get a faster instalation" /><published>2016-01-27T06:02:00-07:00</published><updated>2016-01-27T06:02:00-07:00</updated><id>https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation</id><content type="html" xml:base="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/">&lt;p class=&quot;center-image&quot;&gt;&lt;img src=&quot;/images/posts/npm-progress-bar-twitter.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cada que ejecutamos un comando &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; con la versión 3 de npm  podemos
 ver una bonita barra de progreso que nos dice el porcentaje que lleva la
@@ -107,27 +107,15 @@ una &lt;a href=&quot;https://github.com/iarna/gauge/commit/a7ab9c906bb72aa0ed899
 &lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/softwarefloyd&quot;&gt;@softwarefloyd&lt;/a&gt; &lt;a href=&quot;https://twitter.com/gavinjoyce&quot;&gt;@gavinjoyce&lt;/a&gt; bug found and fixed!&lt;/p&gt;&amp;mdash; Laurie Voss (@seldo) &lt;a href=&quot;https://twitter.com/seldo/status/692192238445711360&quot;&gt;January 27, 2016&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Esperemos que en los proximos &lt;em&gt;releases&lt;/em&gt; de &lt;em&gt;npm&lt;/em&gt; podamos disfrutar de este exelente cambio.&lt;/p&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html"></summary></entry><entry><title type="html">Source and margins</title><link href="https://byoigres.com/en/blog/2015/05/20/source-and-margins/" rel="alternate" type="text/html" title="Source and margins" /><published>2015-05-20T07:02:00-06:00</published><updated>2015-05-20T07:02:00-06:00</updated><id>https://byoigres.com/en/blog/2015/05/20/source-and-margins</id><content type="html" xml:base="https://byoigres.com/en/blog/2015/05/20/source-and-margins/">&lt;p&gt;Hoy por la mañana, al estár editando una presentación utilizando &lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;reveal.js&lt;/a&gt; me
-di a la tarea de agregar el bonito estilo &lt;a href=&quot;https://github.com/isagalaev/highlight.js/blob/master/src/styles/monokai_sublime.css&quot;&gt;Monokai&lt;/a&gt; que utiliza &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;SublimeText&lt;/a&gt; a
-mi presentación, todo iba marchando perfectamente hasta que gracias a la
-propiedad &lt;em&gt;box-shadow&lt;/em&gt; de un elemento &lt;em&gt;pre&lt;/em&gt; me doy cuenta que habia un espacio
-que al parecer no era &lt;em&gt;margin&lt;/em&gt; o &lt;em&gt;padding&lt;/em&gt; dentro de la etiqueta &lt;em&gt;pre&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Esperemos que en los proximos &lt;em&gt;releases&lt;/em&gt; de &lt;em&gt;npm&lt;/em&gt; podamos disfrutar de este exelente cambio.&lt;/p&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html"></summary></entry><entry><title type="html">Source and margins</title><link href="https://byoigres.com/en/blog/2015/05/20/source-and-margins/" rel="alternate" type="text/html" title="Source and margins" /><published>2015-05-20T07:02:00-06:00</published><updated>2015-05-20T07:02:00-06:00</updated><id>https://byoigres.com/en/blog/2015/05/20/source-and-margins</id><content type="html" xml:base="https://byoigres.com/en/blog/2015/05/20/source-and-margins/">&lt;p&gt;This morning when I was trying to edit some slides using &lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;reveal.js&lt;/a&gt; I started to add  the prety &lt;a href=&quot;https://github.com/isagalaev/highlight.js/blob/master/src/styles/monokai_sublime.css&quot;&gt;Monokai&lt;/a&gt; style that &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;SublimeText&lt;/a&gt; uses, everything was doing well until thanks to &lt;em&gt;box-shadow&lt;/em&gt; property of an &lt;em&gt;pre&lt;/em&gt; element I noticed some kind of space that wasn’t a &lt;em&gt;margin&lt;/em&gt; or &lt;em&gt;padding&lt;/em&gt; inside &lt;em&gt;pre&lt;/em&gt; tag.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/1.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/1.png&quot; alt=&quot;There isn't margin nor padding&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Entonces comencé a utilizar las herramientas de desarrollo de Firefox para
-eliminar todo posible margin o padding que viniera con el tema para luego hacer
-el cambio en las hojas de estilo. Margin, padding, border, line-height ¡nada
-funcionaba!, ese maldito espacio aún seguia ahí.&lt;/p&gt;
+&lt;p&gt;Then I started to &lt;code class=&quot;highlighter-rouge&quot;&gt;debug&lt;/code&gt; the styles using Firefox devtools to remove all posible margin or padding comming with the template to make the change in the stylesheets later. &lt;code class=&quot;highlighter-rouge&quot;&gt;Margin&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;border&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;line-height&lt;/code&gt;, any of them make that strange space disapear, that anoying space was still right there.&lt;/p&gt;
 
-&lt;p&gt;Después de unos 30 minutos tratando de eliminar todos los estilos del sitio para
-saber que era ese espacio tuve que recurrir a &lt;a href=&quot;https://es.wikipedia.org/wiki/Googlear&quot;&gt;googlear&lt;/a&gt; que pasaba cuando se
-utiliza una etiqueta &lt;em&gt;code&lt;/em&gt; dentro de una etiqueta &lt;em&gt;pre&lt;/em&gt; y lo que me encontré
-es para tomarlo con gracia por ser algo tan simple pero a la vez es muy
-interesante saber que comportamiento tienen las etiquetas ya que después de saber
-la razón de por que aparecian esos espacios todo era mas lógico.&lt;/p&gt;
+&lt;p&gt;After 30 minutes trying to delete every posible style to know what was that space I decided to google what was happening when a &lt;em&gt;code&lt;/em&gt; tag is inside a &lt;em&gt;pre&lt;/em&gt; tag and what I found it could be funny and stupid at the same time because programmers often forgot to read the documentation before using something. After knowing what was really happening everything makes so more sense and was logic.&lt;/p&gt;
 
-&lt;p&gt;El código que estaba utlizando era el siguiente:&lt;/p&gt;
+&lt;p&gt;This is the code I was using in the slides:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;code&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-trim&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;php5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -145,11 +133,7 @@ $variable = &quot;2.- Hello PHP&quot;;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Si se dan cuenta, para cuestiones de una mejor lectura del código utilizé un
-salto de linea entre las etiquetas &lt;em&gt;pre&lt;/em&gt; y &lt;em&gt;code&lt;/em&gt; tanto al abrilas como al
-cerrarlas. En realidad el salto de línea no importa, lo que si importa son los
-espacios que utilizé para indentar el bloque de la etiqueta &lt;em&gt;pre&lt;/em&gt; y de acuerdo a
-&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre&quot;&gt;MDN&lt;/a&gt; la etiqueta &lt;em&gt;pre&lt;/em&gt; hace lo siguiente:&lt;/p&gt;
+&lt;p&gt;If you take a closer look you’ll notice that I used a &lt;code class=&quot;highlighter-rouge&quot;&gt;line-break&lt;/code&gt; and some spaces between &lt;em&gt;pre&lt;/em&gt; and &lt;em&gt;code&lt;/em&gt; tags for readability. Actually the &lt;code class=&quot;highlighter-rouge&quot;&gt;line-break&lt;/code&gt; doesn’t matter but the spaces does and acording to &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre&quot;&gt;MDN&lt;/a&gt; what really happens with the &lt;em&gt;pre&lt;/em&gt; tag is:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The HTML Preformatted Text (&amp;lt;pre&amp;gt;) represents preformatted text. Text within
@@ -157,8 +141,7 @@ this element is typically displayed in a non-proportional font exactly as it is
 laid out in the file. &lt;strong&gt;Whitespaces inside this element are displayed as typed&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Entonces, creo que con eso queda claro, olvidense de indentar esa etiqueta y eliminen
-todos esos molestos espacios que hay entre cada una de ellas.&lt;/p&gt;
+&lt;p&gt;So, I guess this is crystal clear now, forget to indent &lt;em&gt;pre&lt;/em&gt; tag and delete all the those spaces inside it.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&amp;lt;code&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-trim&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;php5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;ni&quot;&gt;&amp;amp;lt;&lt;/span&gt;?php
@@ -166,4 +149,4 @@ todos esos molestos espacios que hay entre cada una de ellas.&lt;/p&gt;
 echo &quot;Hello world!&quot;;
 
 ?&lt;span class=&quot;ni&quot;&gt;&amp;amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html">Hoy por la mañana, al estár editando una presentación utilizando reveal.js me di a la tarea de agregar el bonito estilo Monokai que utiliza SublimeText a mi presentación, todo iba marchando perfectamente hasta que gracias a la propiedad box-shadow de un elemento pre me doy cuenta que habia un espacio que al parecer no era margin o padding dentro de la etiqueta pre.</summary></entry></feed>
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html">This morning when I was trying to edit some slides using reveal.js I started to add the prety Monokai style that SublimeText uses, everything was doing well until thanks to box-shadow property of an pre element I noticed some kind of space that wasn’t a margin or padding inside pre tag.</summary></entry></feed>
