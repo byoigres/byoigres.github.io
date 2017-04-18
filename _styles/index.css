@@ -8,8 +8,8 @@
 
 /* Vairables */
 :root {
-  --primary-color-1: var(--indigo-500);
-  --primary-color-2: var(--indigo-700);
+  --primary-color-1: var(--blue-900);
+  --primary-color-2: var(--blue-A400);
   --header-font-family: "Oswald";
   --body-font-family: "Raleway";
   --logo-font-family: "Yellowtail";
@@ -99,6 +99,7 @@ pre > code {
     content: attr(data-lang);
     display: block;
     background-color: var(--primary-color-1);
+    color: var(--full-white);
     margin: -1rem -1rem 1rem;
     padding: 0.7rem;
     text-align: center;
@@ -106,6 +107,28 @@ pre > code {
 }
 
 /* Classes */
+/*
+blockquote.disclaimer {
+  padding: 0 1rem;
+  color: white;
+  text-align: center;
+  background-color: #ff5722;
+  border: 1px dashed black;
+
+  & p {
+    font-style: italic;
+  }
+}
+*/
+
+.disclaimer {
+  padding: 1rem 1.25rem;
+  color: white;
+  text-align: center;
+  background-color: #ff5722;
+  border-radius: 0.3125rem;
+  /*border: 1px dashed black;*/
+}
 
 .frontpage {
   background-color: var(--white);
