@@ -8,7 +8,8 @@
 
 /* Vairables */
 :root {
-  --primary-color-1: var(--blue-900);
+  --primary-color-1: var(--indigo-500);
+  --primary-color-2: var(--indigo-700);
   --header-font-family: "Oswald";
   --body-font-family: "Raleway";
   --logo-font-family: "Yellowtail";
@@ -40,13 +41,25 @@ body {
   line-height: 1.5rem;
 }
 
+p {
+  line-height: 1.8rem;
+  text-align: justify;
+}
+
+blockquote {
+  border-left: 1rem solid var(--primary-color-1);
+  margin: 0;
+}
+
 a {
-  color: var(--dark-black);
+  color: var(--primary-color-1);
   transition: color 0.3s;
   text-decoration: none;
+  border-bottom: dashed 0.0125rem var(--primary-color-1);
+  padding-bottom: 3px;
 
   &:hover {
-    color: var(--light-black);
+    color: var(--primary-color-2);
   }
 }
 
@@ -61,6 +74,35 @@ h1, h2 {
 
 img {
   width: 100%;
+}
+
+code:not([data-lang]) {
+  background-color: var(--grey-200);
+  border: 0.0625rem solid var(--grey-300);
+  border-radius: 0.1875rem;
+  color: var(--primary-color-1);
+  font-size: 0.8125rem;
+  padding: 0.125rem 0.25rem;
+  white-space: nowrap;
+}
+
+figure {
+    margin: 0;
+}
+
+pre > code {
+  white-space: pre;
+  margin: 1rem;
+  display: block;
+
+  &:before {
+    content: attr(data-lang);
+    display: block;
+    background-color: var(--primary-color-1);
+    margin: -1rem -1rem 1rem;
+    padding: 0.7rem;
+    text-align: center;
+  }
 }
 
 /* Classes */
@@ -97,6 +139,7 @@ img {
 
   & a {
     color: var(--white);
+    text-decoration: none;
 
     &:hover {
       color: var(--light-white);
@@ -167,6 +210,23 @@ img {
     margin-top: 4rem;
   }
 
+  blockquote {
+    padding-left: 1rem;
+  }
+
+  pre > code {
+    font-size: 0.8rem;
+  }
+
+  h1,
+  h2,
+  h1 a,
+  h2 a {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
   .navbar-container {
     position: absolute;
     width: 100%;
@@ -219,6 +279,11 @@ img {
 }
 
 @media only screen and (width >= 62rem) {
+
+  blockquote {
+    padding-left: 3rem;
+  }
+
   .navbar-container {
     position: fixed;
     width: 16rem;
