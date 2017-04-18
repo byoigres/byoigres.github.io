@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="https://byoigres.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://byoigres.com/" rel="alternate" type="text/html" hreflang="es" /><updated>2017-04-18T12:02:48-06:00</updated><id>https://byoigres.com/</id><title type="html">Sergio Flores</title><subtitle>Blog personal y curiosidades de todos los días.</subtitle><entry><title type="html">Utiliza npm v3.x sin la barra de progreso y obtendrás una instalación más rápida</title><link href="https://byoigres.com/blog/2016/01/27/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida/" rel="alternate" type="text/html" title="Utiliza npm v3.x sin la barra de progreso y obtendrás una instalación más rápida" /><published>2016-01-27T06:02:00-07:00</published><updated>2016-01-27T06:02:00-07:00</updated><id>https://byoigres.com/blog/2016/01/27/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida</id><content type="html" xml:base="https://byoigres.com/blog/2016/01/27/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida/">&lt;p class=&quot;center-image&quot;&gt;&lt;img src=&quot;/images/posts/npm-progress-bar-twitter.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="https://byoigres.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://byoigres.com/" rel="alternate" type="text/html" hreflang="es" /><updated>2017-04-18T15:11:07-06:00</updated><id>https://byoigres.com/</id><title type="html">Sergio Flores</title><subtitle>Blog personal y curiosidades de todos los días.</subtitle><entry><title type="html">Utiliza npm v3.x sin la barra de progreso y obtendrás una instalación más rápida</title><link href="https://byoigres.com/blog/2016/01/27/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida/" rel="alternate" type="text/html" title="Utiliza npm v3.x sin la barra de progreso y obtendrás una instalación más rápida" /><published>2016-01-27T06:02:00-07:00</published><updated>2016-01-27T06:02:00-07:00</updated><id>https://byoigres.com/blog/2016/01/27/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida</id><content type="html" xml:base="https://byoigres.com/blog/2016/01/27/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida/">&lt;p class=&quot;center-image&quot;&gt;&lt;img src=&quot;/images/posts/npm-progress-bar-twitter.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cada que ejecutamos un comando &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; con la versión 3 de npm  podemos
 ver una bonita barra de progreso que nos dice el porcentaje que lleva la
@@ -110,19 +110,19 @@ una &lt;a href=&quot;https://github.com/iarna/gauge/commit/a7ab9c906bb72aa0ed899
 &lt;p&gt;Esperemos que en los proximos &lt;em&gt;releases&lt;/em&gt; de &lt;em&gt;npm&lt;/em&gt; podamos disfrutar de este exelente cambio.&lt;/p&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html"></summary></entry><entry><title type="html">Código fuente y margenes</title><link href="https://byoigres.com/blog/2015/05/20/pre-code-y-margenes/" rel="alternate" type="text/html" title="Código fuente y margenes" /><published>2015-05-20T07:02:00-06:00</published><updated>2015-05-20T07:02:00-06:00</updated><id>https://byoigres.com/blog/2015/05/20/pre-code-y-margenes</id><content type="html" xml:base="https://byoigres.com/blog/2015/05/20/pre-code-y-margenes/">&lt;p&gt;Hoy por la mañana, al estár editando una presentación utilizando &lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;reveal.js&lt;/a&gt; me
 di a la tarea de agregar el bonito estilo &lt;a href=&quot;https://github.com/isagalaev/highlight.js/blob/master/src/styles/monokai_sublime.css&quot;&gt;Monokai&lt;/a&gt; que utiliza &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;SublimeText&lt;/a&gt; a
 mi presentación, todo iba marchando perfectamente hasta que gracias a la
-propiedad &lt;em&gt;box-shadow&lt;/em&gt; de un elemento &lt;em&gt;pre&lt;/em&gt; me doy cuenta que habia un espacio
-que al parecer no era &lt;em&gt;margin&lt;/em&gt; o &lt;em&gt;padding&lt;/em&gt; dentro de la etiqueta &lt;em&gt;pre&lt;/em&gt;.&lt;/p&gt;
+propiedad &lt;code class=&quot;highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt; de un elemento &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt; me doy cuenta que habia un espacio
+que al parecer no era &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt; o &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt; dentro de la etiqueta &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/1.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Entonces comencé a utilizar las herramientas de desarrollo de Firefox para
-eliminar todo posible margin o padding que viniera con el tema para luego hacer
-el cambio en las hojas de estilo. &lt;code class=&quot;highlighter-rouge&quot;&gt;Margin&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;border&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;line-height&lt;/code&gt; ¡nada
+eliminar todo posible &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt; o &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt; que viniera con el tema para luego hacer
+el cambio en las hojas de estilo. &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;border&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;line-height&lt;/code&gt; ¡nada
 funcionaba!, ese maldito espacio aún seguia ahí.&lt;/p&gt;
 
 &lt;p&gt;Después de unos 30 minutos tratando de eliminar todos los estilos del sitio para
 saber que era ese espacio tuve que recurrir a &lt;a href=&quot;https://es.wikipedia.org/wiki/Googlear&quot;&gt;googlear&lt;/a&gt; que pasaba cuando se
-utiliza una etiqueta &lt;em&gt;code&lt;/em&gt; dentro de una etiqueta &lt;em&gt;pre&lt;/em&gt; y lo que me encontré
+utiliza una etiqueta &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt; dentro de una etiqueta &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt; y lo que me encontré
 es para tomarlo con gracia por ser algo tan simple pero a la vez es muy
 interesante saber que comportamiento tienen las etiquetas ya que después de saber
 la razón de por que aparecian esos espacios todo era mas lógico.&lt;/p&gt;
@@ -146,9 +146,9 @@ $variable = &quot;2.- Hello PHP&quot;;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Si se dan cuenta, para cuestiones de una mejor lectura del código utilizé un
-salto de linea entre las etiquetas &lt;em&gt;pre&lt;/em&gt; y &lt;em&gt;code&lt;/em&gt; tanto al abrilas como al
+salto de linea entre las etiquetas &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt; y &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt; tanto al abrilas como al
 cerrarlas. En realidad el salto de línea no importa, lo que si importa son los
-espacios que utilizé para indentar el bloque de la etiqueta &lt;em&gt;pre&lt;/em&gt; y de acuerdo a
+espacios que utilizé para indentar el bloque de la etiqueta &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt; y de acuerdo a
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre&quot;&gt;MDN&lt;/a&gt; la etiqueta &lt;em&gt;pre&lt;/em&gt; hace lo siguiente:&lt;/p&gt;
 
 &lt;blockquote&gt;
