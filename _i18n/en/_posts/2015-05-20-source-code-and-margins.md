@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Source and margins"
+title: "Source code and margins"
 date: 2015-05-20 13:02:00
 categories: css html tips
 author: sergio
 ---
 
-This morning when I was trying to edit some slides using [reveal.js] I started to add  the prety [Monokai] style that [SublimeText] uses, everything was doing well until thanks to _box-shadow_ property of an _pre_ element I noticed some kind of space that wasn't a _margin_ or _padding_ inside _pre_ tag.
+This morning when I was trying to edit some slides using [reveal.js] I started to add the pretty [Monokai] style that [SublimeText] uses, everything was doing well until thanks to _box-shadow_ property of an _pre_ element I noticed some kind of space that wasn't a _margin_ or _padding_ inside _pre_ tag.
 
-![There isn't margin nor padding]({{ "/images/posts/1.png" | prepend: site.baseurl_root }})
+![There isn't margin or padding]({{ "/images/posts/1.png" | prepend: site.baseurl_root }})
 
-Then I started to `debug` the styles using Firefox devtools to remove all posible margin or padding comming with the template to make the change in the stylesheets later. `Margin`, `padding`, `border`, `line-height`, any of them make that strange space disapear, that anoying space was still right there.
+Then I started to `debug` the styles using Firefox devtools to remove all posible margin or padding comming with the template to make the change in the stylesheets later. `Margin`, `padding`, `border`, `line-height`, any of them didn't make that strange space disappear, that annoying space was still right there.
 
 After 30 minutes trying to delete every posible style to know what was that space I decided to google what was happening when a _code_ tag is inside a _pre_ tag and what I found it could be funny and stupid at the same time because programmers often forgot to read the documentation before using something. After knowing what was really happening everything makes so more sense and was logic.
 
@@ -40,7 +40,7 @@ If you take a closer look you'll notice that I used a `line-break` and some spac
 this element is typically displayed in a non-proportional font exactly as it is
 laid out in the file. **Whitespaces inside this element are displayed as typed**.
 
-So, I guess this is crystal clear now, forget to indent _pre_ tag and delete all the those spaces inside it.
+So, I guess this is crystal clear now, don't forget to indent the _pre_ tag and delete all the those spaces inside it.
 
 {% highlight html %}
 <pre><code data-trim class="php5">
