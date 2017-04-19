@@ -1,19 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="https://byoigres.com/en/feed.xml" rel="self" type="application/atom+xml" /><link href="https://byoigres.com/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2017-04-18T16:37:56-06:00</updated><id>https://byoigres.com/en/</id><title type="html">Sergio Flores</title><subtitle>Blog personal y curiosidades de todos los días.</subtitle><entry><title type="html">Use npm v3.x without progress bar and you’ll get a faster instalation</title><link href="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/" rel="alternate" type="text/html" title="Use npm v3.x without progress bar and  you'll get a faster instalation" /><published>2016-01-27T06:02:00-07:00</published><updated>2016-01-27T06:02:00-07:00</updated><id>https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation</id><content type="html" xml:base="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/">&lt;p class=&quot;center-image&quot;&gt;&lt;img src=&quot;/images/posts/npm-progress-bar-twitter.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.4.2">Jekyll</generator><link href="https://byoigres.com/en/feed.xml" rel="self" type="application/atom+xml" /><link href="https://byoigres.com/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2017-04-18T18:51:48-06:00</updated><id>https://byoigres.com/en/</id><title type="html">Sergio Flores</title><subtitle>Blog personal y curiosidades de todos los días.</subtitle><entry><title type="html">Use npm v3.x without progress bar and you’ll get a faster instalation</title><link href="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/" rel="alternate" type="text/html" title="Use npm v3.x without progress bar and  you'll get a faster instalation" /><published>2016-01-27T06:02:00-07:00</published><updated>2016-01-27T06:02:00-07:00</updated><id>https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation</id><content type="html" xml:base="https://byoigres.com/en/blog/2016/01/27/use-npm-v3.x-without-progressbar-and-you-ll-get-a-faster-instalation/">&lt;p class=&quot;center-image&quot;&gt;&lt;img src=&quot;/images/posts/npm-progress-bar-twitter.png&quot; alt=&quot;No es margin ni padding&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cada que ejecutamos un comando &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; con la versión 3 de npm  podemos
-ver una bonita barra de progreso que nos dice el porcentaje que lleva la
-instalación de las dependencias que estamos instalando.&lt;/p&gt;
+&lt;p&gt;Everytime we run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; using version 3 of npm we can see a cool progress bar displaying the percentage of the current installation of the dependencies.&lt;/p&gt;
 
-&lt;p&gt;Con o sin barra de progreso &lt;a href=&quot;https://www.npmjs.com/package/npm&quot;&gt;npm&lt;/a&gt; se ha vuelto más lento desde la salida de la
-versión 3. Tanto así que desde hace algún tiempo alguién ha creado una versión
-alternativa para manejar los paquetes de node.js llamada &lt;a href=&quot;http://gugel.io/ied/&quot;&gt;ied&lt;/a&gt; con el objetivo
-de obtener un mayor rendimiento.&lt;/p&gt;
+&lt;p&gt;Using the progress bar or not &lt;a href=&quot;https://www.npmjs.com/package/npm&quot;&gt;npm&lt;/a&gt; had become a bit slowler since version 3. So much so that some time ago someone created an alternative version of &lt;a href=&quot;https://www.npmjs.com/package/npm&quot;&gt;npm&lt;/a&gt; called &lt;a href=&quot;http://gugel.io/ied/&quot;&gt;ied&lt;/a&gt; aiming to have betters reusults in terms of performance.&lt;/p&gt;
 
-&lt;p&gt;Seamos claros, &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; es el comando que con mayor frecuencia utilizamos,
-por lo menos deberia hacerlo bien ¿o no?&lt;/p&gt;
+&lt;p&gt;Let’s be clear, &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; is the most used command we use, at least it should be fast right?&lt;/p&gt;
 
-&lt;p&gt;Vamos a realizar un ejemplo instalando una cantidad significativa de dependencias
-utilizando y no la barra de progreso. El listado de dependencias es el siguiente:&lt;/p&gt;
+&lt;p&gt;We’re going to do a example installing a some dependencies with and without progress bar. The dependencies are listed here:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;assets-webpack-plugin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^3.2.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -56,17 +49,14 @@ utilizando y no la barra de progreso. El listado de dependencias es el siguiente
   &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;webpack-hot-middleware&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^2.6.2&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Tomaremos el tiempo en cada ejecución y veremos que existe un ligero rendimiento
-al instalar las dependencias sin mostrar la barra de progreso.&lt;/p&gt;
+&lt;p&gt;We’ll take the time in every run and see that when we’re not using the progress bar the installation takes less time than when there is one.&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://asciinema.org/a/34946.js&quot; id=&quot;asciicast-34946&quot; async=&quot;&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Con barra de progreso: 3 minutos con 8 segundos, sin barra de progreso &lt;strong&gt;2
-minutos con 44 segundos&lt;/strong&gt;, esto es un 12% mas rápido.&lt;/p&gt;
+&lt;p&gt;With progress bar: 3 minutes 8 seconds, without progress bar &lt;strong&gt;2
+minutes 44 seconds&lt;/strong&gt;, this is 12% faster.&lt;/p&gt;
 
-&lt;p&gt;Toda esta controversia nacio de un
-&lt;a href=&quot;https://github.com/npm/npm/issues/8826#issuecomment-155762361&quot;&gt;comentario en un issue en github&lt;/a&gt;
-en donde el usuario &lt;a href=&quot;https://github.com/andrenarchy&quot;&gt;@andrenarchy&lt;/a&gt; publica lo siguiente:&lt;/p&gt;
+&lt;p&gt;This originally shown in this [issue comment](https://github.com/npm/npm/issues/8826#issuecomment-155762 where &lt;a href=&quot;https://github.com/andrenarchy&quot;&gt;@andrenarchy&lt;/a&gt; commented the following:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;rm -rf node_modules
@@ -84,30 +74,22 @@ real    21m13.415s
 user    20m36.752s
 sys 0m42.010s&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;¡Sin mostrar la barra de progreso reducimos el tiempo de instalación de &lt;strong&gt;21
-minutos con 13 segundos&lt;/strong&gt; a &lt;strong&gt;5 minutos con 10 segundos&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Whitout progress bar the installation time is reduces from &lt;strong&gt;21 minutes and  13 seconds&lt;/strong&gt; to &lt;strong&gt;5 minutes and 10 seconds&lt;/strong&gt;!&lt;/p&gt;
 
-&lt;p&gt;Esa instalación probablemente contiene muchas dependencias, pero inclusive en el
-&lt;a href=&quot;https://twitter.com/gavinjoyce/status/691773956144119808&quot;&gt;tweet que Gavin Joyce publicó&lt;/a&gt;
-mostrando el mismo ejemplo, el tiempo de instalación de las dependencias se redujo
-considerablemente de &lt;strong&gt;3 minutos con 35 segundos&lt;/strong&gt; a &lt;strong&gt;1 minuto con 53&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Probably the installation have a lot of dependencies but even in &lt;a href=&quot;https://twitter.com/gavinjoyce/status/691773956144119808&quot;&gt;this tweet&lt;/a&gt; published by Gavin Joyce using the same example the installation time was reduced a lot, from &lt;strong&gt;3 minutes and 35 seconds&lt;/strong&gt; to &lt;strong&gt;1 minute and 53&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;It sounds crazy, but disabling npm&amp;#39;s progress bar yields a 2x npm install speed improvement for me &lt;a href=&quot;https://t.co/ChXxSepCBK&quot;&gt;pic.twitter.com/ChXxSepCBK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Gavin Joyce (@gavinjoyce) &lt;a href=&quot;https://twitter.com/gavinjoyce/status/691773956144119808&quot;&gt;January 26, 2016&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;¿Qué está causando tal cosa?&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;So, what is happening?&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Después de un genial y profundo analisis mostrado en los comentarios del issue
-&lt;a href=&quot;https://github.com/npm/npm/issues/11283#issuecomment-175246823&quot;&gt;#11283&lt;/a&gt; por el usuario &lt;a href=&quot;https://github.com/samccone&quot;&gt;@samccone&lt;/a&gt; nos percatamos de que hay una problema en el
-paquete &lt;a href=&quot;https://github.com/iarna/gauge&quot;&gt;gauge&lt;/a&gt; al momento de llamar la función &lt;code class=&quot;highlighter-rouge&quot;&gt;show&lt;/code&gt;, y como el mundo del Open
-Source es impresionante basto con unas pocas horas para que alguien llegara con
-una &lt;a href=&quot;https://github.com/iarna/gauge/commit/a7ab9c906bb72aa0ed8996a00db2cd35a22d5992&quot;&gt;solución&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After a deep analysis from @samccone in the comments of the issue &lt;a href=&quot;https://github.com/npm/npm/issues/11283#issuecomment-175246823&quot;&gt;#11283&lt;/a&gt; we notice that there’s a problem using the &lt;code class=&quot;highlighter-rouge&quot;&gt;show&lt;/code&gt; method within the &lt;a href=&quot;https://github.com/iarna/gauge&quot;&gt;gauge&lt;/a&gt; package, the open source community is amazing, because within a few hours someone came with a handy &lt;a href=&quot;https://github.com/iarna/gauge/commit/a7ab9c906bb72aa0ed8996a00db2cd35a22d5992&quot;&gt;solution&lt;/a&gt; to solve this problem.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/softwarefloyd&quot;&gt;@softwarefloyd&lt;/a&gt; &lt;a href=&quot;https://twitter.com/gavinjoyce&quot;&gt;@gavinjoyce&lt;/a&gt; bug found and fixed!&lt;/p&gt;&amp;mdash; Laurie Voss (@seldo) &lt;a href=&quot;https://twitter.com/seldo/status/692192238445711360&quot;&gt;January 27, 2016&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Esperemos que en los proximos &lt;em&gt;releases&lt;/em&gt; de &lt;em&gt;npm&lt;/em&gt; podamos disfrutar de este exelente cambio.&lt;/p&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html"></summary></entry><entry><title type="html">Source code and margins</title><link href="https://byoigres.com/en/blog/2015/05/20/source-code-and-margins/" rel="alternate" type="text/html" title="Source code and margins" /><published>2015-05-20T07:02:00-06:00</published><updated>2015-05-20T07:02:00-06:00</updated><id>https://byoigres.com/en/blog/2015/05/20/source-code-and-margins</id><content type="html" xml:base="https://byoigres.com/en/blog/2015/05/20/source-code-and-margins/">&lt;p&gt;This morning when I was trying to edit some slides using &lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;reveal.js&lt;/a&gt; I started to add the pretty &lt;a href=&quot;https://github.com/isagalaev/highlight.js/blob/master/src/styles/monokai_sublime.css&quot;&gt;Monokai&lt;/a&gt; style that &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;SublimeText&lt;/a&gt; uses, everything was doing well until thanks to &lt;code class=&quot;highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt; property of an &lt;em&gt;pre&lt;/em&gt; element I noticed some kind of space that wasn’t a &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt; inside &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt; tag.&lt;/p&gt;
+&lt;p&gt;I hope in the next &lt;em&gt;releases&lt;/em&gt; of &lt;em&gt;npm&lt;/em&gt; we can enjoy of this excellent fix.&lt;/p&gt;</content><author><name>Sergio Flores</name><email>byoigres@gmail.com</email></author><summary type="html"></summary></entry><entry><title type="html">Source code and margins</title><link href="https://byoigres.com/en/blog/2015/05/20/source-code-and-margins/" rel="alternate" type="text/html" title="Source code and margins" /><published>2015-05-20T07:02:00-06:00</published><updated>2015-05-20T07:02:00-06:00</updated><id>https://byoigres.com/en/blog/2015/05/20/source-code-and-margins</id><content type="html" xml:base="https://byoigres.com/en/blog/2015/05/20/source-code-and-margins/">&lt;p&gt;This morning when I was trying to edit some slides using &lt;a href=&quot;http://lab.hakim.se/reveal-js&quot;&gt;reveal.js&lt;/a&gt; I started to add the pretty &lt;a href=&quot;https://github.com/isagalaev/highlight.js/blob/master/src/styles/monokai_sublime.css&quot;&gt;Monokai&lt;/a&gt; style that &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;SublimeText&lt;/a&gt; uses, everything was doing well until thanks to &lt;code class=&quot;highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt; property of an &lt;em&gt;pre&lt;/em&gt; element I noticed some kind of space that wasn’t a &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt; inside &lt;code class=&quot;highlighter-rouge&quot;&gt;pre&lt;/code&gt; tag.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/1.png&quot; alt=&quot;There isn't margin or padding&quot; /&gt;&lt;/p&gt;
 
