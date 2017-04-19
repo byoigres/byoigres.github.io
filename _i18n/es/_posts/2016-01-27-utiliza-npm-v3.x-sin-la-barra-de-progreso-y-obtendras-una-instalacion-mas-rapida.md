@@ -7,7 +7,7 @@ author: sergio
 ---
 
 {: .center-image}
-![No es margin ni padding]({{ "/images/posts/npm-progress-bar-twitter.png" | prepend: site.baseurl }})
+![Barra de progreso de npm]({{ "/images/posts/npm-progress-bar-twitter.png" | prepend: site.baseurl }})
 
 Cada que ejecutamos un comando `npm install` con la versión 3 de npm  podemos
 ver una bonita barra de progreso que nos dice el porcentaje que lleva la
