@@ -51,16 +51,19 @@ blockquote {
   margin: 0;
 }
 
-a:not(.post-link) {
+a {
   color: var(--primary-color-1);
   transition: color 0.3s;
   text-decoration: none;
-  border-bottom: dashed 0.0125rem var(--primary-color-1);
-  padding-bottom: 3px;
 
   &:hover {
     color: var(--primary-color-2);
   }
+}
+
+a:not(.post-link) {
+  border-bottom: dashed 0.0125rem var(--primary-color-1);
+  padding-bottom: 3px;
 }
 
 h1, h2 {
