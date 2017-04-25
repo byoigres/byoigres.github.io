@@ -8,8 +8,8 @@
 
 /* Vairables */
 :root {
-  --primary-color-1: var(--blue-900);
-  --primary-color-2: var(--blue-A400);
+  --primary-color-1: var(--indigo-500);
+  --primary-color-2: var(--indigo-900);
   --header-font-family: "Oswald";
   --body-font-family: "Raleway";
   --logo-font-family: "Yellowtail";
