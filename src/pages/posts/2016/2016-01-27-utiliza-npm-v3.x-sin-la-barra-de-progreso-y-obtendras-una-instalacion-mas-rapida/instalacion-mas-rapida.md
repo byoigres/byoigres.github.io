@@ -4,7 +4,7 @@ title: "Utiliza npm v3.x sin la barra de progreso y obtendrás una instalación 
 date: 2016-01-27 13:02:00
 categories: npm node bugs
 author: sergio
-path: "/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida/"
+path: "/blog/utiliza-npm-v3.x-sin-la-barra-de-progreso-y-obtendras-una-instalacion-mas-rapida/"
 ---
 
 ![Barra de progreso de npm](./npm-progress-bar-twitter.png)

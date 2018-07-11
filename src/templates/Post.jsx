@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import DateTime from '../components/DateTime';
 import { DiscussionEmbed } from 'disqus-react';
 import Waypoint from 'react-waypoint';
 import styled from 'styled-components';
@@ -67,7 +68,7 @@ export default class Template extends Component {
         <Post>
           <PostMeta>
             <PostTitle>{post.frontmatter.title}</PostTitle>
-            <time>{post.frontmatter.date}</time>
+            <DateTime format="MMMM D, YYYY">{post.frontmatter.date}</DateTime>
           </PostMeta>
           <PostContent
             /* eslint react/no-danger: 0 */

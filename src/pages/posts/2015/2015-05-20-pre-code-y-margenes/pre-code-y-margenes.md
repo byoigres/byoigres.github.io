@@ -4,7 +4,7 @@ title: "Código fuente y margenes"
 date: 2015-05-20 13:02:00
 categories: css html tips
 author: sergio
-path: "/pre-code-y-margenes"
+path: "/blog/pre-code-y-margenes"
 ---
 
 Hoy por la mañana, al estár editando una presentación utilizando [reveal.js] me
