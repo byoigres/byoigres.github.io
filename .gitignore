@@ -1,6 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-metadata
-node_modules
-*.log
-.env
+# Build output
+public/
+.cache/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log*
