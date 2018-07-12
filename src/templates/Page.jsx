@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import PageTitle from '../components/PageTitle';
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -17,6 +18,7 @@ const Post = styled.article`
 
   @media only screen and (max-width: 29.999rem) {
     max-width: 100%;
+
     p {
       font-size: 1rem;
       line-height: 1.8rem;
@@ -25,12 +27,6 @@ const Post = styled.article`
 `;
 
 const PostMeta = styled.section``;
-
-const PostTitle = styled.h1`
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2.5rem;
-`;
 
 const PostContent = styled.section``;
 
@@ -42,7 +38,7 @@ export default function Template({ data }) {
       <Helmet title={`${post.frontmatter.title} - Sergio Flores`} />
       <Post>
         <PostMeta>
-          <PostTitle>{post.frontmatter.title}</PostTitle>
+          <PageTitle>{post.frontmatter.title}</PageTitle>
         </PostMeta>
         <PostContent
           /* eslint react/no-danger: 0 */

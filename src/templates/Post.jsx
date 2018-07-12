@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import DateTime from '../components/DateTime';
 import { DiscussionEmbed } from 'disqus-react';
 import Waypoint from 'react-waypoint';
 import styled from 'styled-components';
+import DateTime from '../components/DateTime';
+import PageTitle from '../components/PageTitle';
 
 const Post = styled.article`
   flex: 1 0 100%;
@@ -20,6 +21,7 @@ const Post = styled.article`
 
   @media only screen and (max-width: 29.999rem) {
     max-width: 100%;
+
     p {
       font-size: 1rem;
       line-height: 1.8rem;
@@ -29,16 +31,12 @@ const Post = styled.article`
 
 const PostMeta = styled.section``;
 
-const PostTitle = styled.h1`
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2.5rem;
-`;
+const PostTitle = styled(PageTitle)``;
 
 const PostContent = styled.section``;
 const PostComments = styled.section``;
 const LoadingComments = styled.div`
-  &:before {
+  &::before {
     content: 'Cargando comentarios...';
   }
 `;

@@ -4,10 +4,7 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import 'prismjs/themes/prism-coy.css';
 import DateTime from '../components/DateTime';
-
-const Title = styled.h1`
-  text-transform: capitalize;
-`;
+import PageTitle from '../components/PageTitle';
 
 const Post = styled.section`
   flex: 1 0 100%;
@@ -26,7 +23,7 @@ const PostTitle = styled(Link)``;
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
   <article>
-    <Title>Últimas publicaciones</Title>
+    <PageTitle>Últimas publicaciones</PageTitle>
     {posts.map(post => (
       <Post key={post.node.frontmatter.path}>
         <DateTime format="MMMM D, YYYY">{post.node.frontmatter.date}</DateTime>
