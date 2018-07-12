@@ -1,2 +1,0 @@
-webpackJsonp([0xc6f0978e888a],{439:function(e,a){e.exports={data:{site:{siteMetadata:{disqusShortname:"byoigres"}},markdownRemark:{id:"/home/sergio/Projects/byoigr.es/_byoigres.github.io/src/pages/pages/acerca-de-mi.md absPath of file >>> MarkdownRemark",html:'<p>Hola, mi nombre es Sergio Flores, soy programador y me encanta aprender cosas nuevas.</p>\n<p><a href="/contacto">Contactame</a></p>',frontmatter:{date:null,path:"/acerca-de-mi/",title:"Acerca de mi"}}},pathContext:{}}}});
-//# sourceMappingURL=3092c2ebda07bb333b54.js.map
