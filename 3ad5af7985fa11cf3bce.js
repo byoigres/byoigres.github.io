@@ -1,2 +1,0 @@
-webpackJsonp([0xa6bc690a59e9],{312:function(e,t,n){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var a=n(2),l=u(a),d=function(){return l.default.createElement("div",null,l.default.createElement("h1",null,"404"),l.default.createElement("p",null,"La página que estás buscando no pudo ser encontrada."))};t.default=d,e.exports=t.default}});
-//# sourceMappingURL=3ad5af7985fa11cf3bce.js.map
