@@ -1,12 +1,108 @@
 ---
 layout: post
-title: "nginx y docker"
-date: 2016-01-27 13:02:00
+title: "URLs amigables utilizando NGINX y docker"
+date: 2018-12-4 21:31:00
 categories: nginx docker 
 author: sergio
 path: "/drafs/nginx-docker/"
-draft: true
+draft: false
 ---
+
+## Introducción
+
+Si has utilizado _docker_ para ejecutar tus aplicaciones web seguramente has accedido a ellas utilizando una URL como https://localhost:3000 porque al momento de crear tu contenedor definiste que el puerto 3000 es el que se utilizará desde el host local el cual es **localhost**.
+
+## Dejar de utilizar _localhost_
+
+Una manera de simular que estamos utilizando una dirección web diferente a _localhost_ es editando el archivo _hosts_ del sistema operativo y agregar un hostname que utilize la dirección IP local _127.0.0.1_.
+
+Para este ejemplo agregaremos el hostname `mi-pagina-local.com` al archivo _hosts_:
+
+```hosts
+127.0.0.1  localhost mi-pagina-local.com
+::1        localhost
+```
+
+Ahora, si accedemos en el navegador web a `mi-pagina-local.com:3000` veremos que nuestra aplicación se está ejecutando.
+
+## Dejar de utilizar el puerto (transparentemente)
+
+Si bien no podemos eliminar ó dejar de utilizar uno de los puertos en la dirección web, si podemos utilizar uno de los puertos predeterminados (80 ó 443) que dependiendo del protocolo que utilizemos (http ó https) se asignará de manera automática al acceder con la URL.
+
+Entonces crearemos ejecutaremos nuestro contenedor utilizando el puerto 80 del equipo local, con esto ahora es posible acceder a nuestra aplicación utilizando la URL `mi-pagina-local.com`.
+
+## Utilizando multiples hostnames
+
+Así como agregamos `mi-pagina-local.com` al archivo _hosts_ también podemos agregar tantos hostnames como queramos, a fin de cuentas todos van a configurarse para utilizar 127.0.0.1, o mejor dicho, con todos los hostnames configurados se accederá al mismo sitio que _localhost_, lo cual a fin de cuentas no sirve de mucho.
+
+```hosts
+127.0.0.1  localhost mi-pagina-local.com
+::1        localhost
+
+Hostnames personalizados
+
+127.0.0.1   super-pagina.com
+127.0.0.1   google-mejorado.com
+127.0.0.1   gooogle.com
+127.0.0.1   facebook.com.mx
+```
+
+## Multiples hostnames, multiples aplicaciones
+
+_¿Pero que pensarias si te dijera que cada uno de los hostnames que configuraste en tu archivo hosts puediera ser utilizado para cada una de tus aplicaciones?_
+
+Pues bien, podemos hacerlo, para ello vamos a utilizar los [servidores virtuales basados en nombres][nginx-name-based-virtual-servers] del servidor web **NGINX**.
+
+Editaremos los archivos de configuración de NGINX para agregar tres configuraciones de tipo servidor:
+
+```nginx.conf
+server {
+  listen 80;
+
+  server_name node.containers.com;
+
+  location ^~ / {
+    roxy_pass http://localhost:3618;
+  }
+}
+
+server {
+  listen 80;
+
+  server_name python.containers.com;
+
+  location ^~ / {
+    roxy_pass http://localhost:3620;
+  }
+}
+
+server {
+  listen 80;
+
+  server_name php.containers.com;
+
+  location ^~ / {
+    roxy_pass http://localhost:3622;
+  }
+}
+```
+
+Para poder reconocer estos hostnames también necesitaremos agregarlos al archivo _hosts_:
+
+```hosts
+127.0.0.1	localhost
+
+# Containers configuration
+127.0.0.1	node.containers.com
+127.0.0.1	python.containers.com
+127.0.0.1	php.containers.com
+```
+
+https://github.com/byoigres/example-840f-nginx-docker
+
+## Proxy Pass — o redireccionando la URL —
+
+NGINX permite redireccionar una URL hacia otra...
 
 Primero instalar nginx.
 
@@ -111,6 +207,7 @@ http {
 #}
 ```
 
-
-[docker-wordpress]: https://docs.docker.com/compose/wordpress/#build-the-project
-[docker-django]: https://docs.docker.com/compose/django/#create-a-django-project
+[apache]: https://httpd.apache.org/
+[nginx]: https://nginx.org/
+[host-file-location]: https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system
+[nginx-name-based-virtual-servers]: https://nginx.org/en/docs/http/request_processing.html
