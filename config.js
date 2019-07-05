@@ -1,39 +1,36 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://byoigres.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
-  disqusShortname: '',
+  title: 'Sergio Flores',
+  subtitle: 'Programador, bebedor de café, amante de las mascotas, Zelda FTW...',
+  copyright: '© Sin derechos reservados =)',
+  disqusShortname: 'byoigres',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-98315944-1',
   menu: [
     {
-      label: 'Articles',
+      label: 'Artículos',
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: 'Acerca de mi',
+      path: '/acerca-de-mi'
     },
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
+      label: 'Contacto',
+      path: '/contacto'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Sergio Flores',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Programador, bebedor de café, amante de las mascotas, Zelda FTW...',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'byoigres@gmail.com',
+      twitter: 'byoigres',
+      github: 'byoigres'
     }
   }
 };
