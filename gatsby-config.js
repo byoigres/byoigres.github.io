@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Sergio Flores`,
-    description: `Página personal de Sergio Flores.`,
+    description: `Sergio Flores personal homepage`,
     author: `@byoigres`,
+    siteUrl: "https://byoigr.es",
+    twitter: "http://t.co/byoigres",
+    disqusShortname: "byoigres",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,16 +15,6 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -37,6 +30,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          'Changa+One',
+          'Libre+Baskerville',
+          'Open+Sans:400,700'
+        ],
+        display: 'swap'
+      }
+    },
+    'gatsby-plugin-styled-components',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
