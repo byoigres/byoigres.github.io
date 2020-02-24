@@ -4,7 +4,24 @@ module.exports = {
     description: `Sergio Flores personal homepage`,
     author: `@byoigres`,
     siteUrl: "https://byoigr.es",
-    twitter: "http://t.co/byoigres",
+    contact: {
+      twitter: {
+        icon: 'FaTwitter',
+        link: "http://t.co/byoigres"
+      },
+      linkedin: {
+        icon: 'FaLinkedinIn',
+        link: "https://www.linkedin.com/in/byoigres"
+      },
+      github: {
+        icon: 'FaGithub',
+        link: "https://www.github.com/byoigres"
+      },
+      email: {
+        icon: 'FaEnvelope',
+        link: "sergio@byoigr.es"
+      }
+    },
     disqusShortname: "byoigres",
   },
   plugins: [
@@ -16,8 +33,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,15 +48,24 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          'Changa+One',
-          'Libre+Baskerville',
-          'Open+Sans:400,700'
+          {
+            family: 'Changa+One',
+          },
+          {
+            family: 'Libre+Baskerville',
+          },
+          {
+            family: 'Open+Sans',
+            variants: [
+              '400',
+              '700'
+            ]
+          },
         ],
-        display: 'swap'
-      }
+      },
     },
     'gatsby-plugin-styled-components',
     // this (optional) plugin enables Progressive Web App + Offline functionality
