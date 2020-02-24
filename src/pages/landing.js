@@ -16,6 +16,13 @@ const GlobalStyle = createGlobalStyle`
 const LandingPage = () => (
     <Fragment>
         <Hero title="Sergio Flores" />
+        <div>
+            {
+                [...Array(100).keys()].map(() => (
+                    <h1>What?</h1>
+                ))
+            }
+        </div>
         <GlobalStyle />
     </Fragment>
 )

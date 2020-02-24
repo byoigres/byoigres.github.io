@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope  } from 'react-icons/fa/';
-import background from '../images/background.jpg';
+import { StaticQuery, graphql } from "gatsby"
+// import { FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa/';
+import * as FA from 'react-icons/fa/';
 
 const HeroBlock = styled.header`
     background-color: #01579B;
-    background-image: url(${background});
-    min-height: 600px;
+    background: url(${props => props.background}) #01579B no-repeat center center fixed;
+    background-size: cover;
+    min-height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: ${window.innerHeight}px;
     width: 100%;
-    position: fixed;
 `;
 
 const Container = styled.hgroup`
@@ -63,29 +64,95 @@ const Social = styled.div`
     }
 `;
 
-const Hero = ({title}) => (
-    <HeroBlock>
-        <Container>
-            <Header>{title}</Header>
-            {/* <h1>{title}</h1> */}
-            <Position>Web Developer</Position>
-            <Carrear>Informatics</Carrear>
-            <Social>
-                <a href="https://www.linkedin.com/in/byoigres" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedinIn />
-                </a>
-                <a href="https://www.twitter.com/byoigres" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter />
-                </a>
-                <a href="https://www.github.com/byoigres" target="_blank" rel="noopener noreferrer">
-                    <FaGithub />
-                </a>
-                <a href="mailto:sergio@byoigr.es" target="_blank" rel="noopener noreferrer">
-                    <FaEnvelope />
-                </a>
-            </Social>
-        </Container>
-    </HeroBlock>
-);
+const Hero = ({ title, backgroundImage, contact }) => {
+    
+    return (
+        <HeroBlock background={backgroundImage}>
+            <Container>
+                <Header>{title}</Header>
+                <Position>Web Developer</Position>
+                <Carrear>Informatics</Carrear>
+                <Social>
+                    {
+                        Object.keys(contact).map(key => {
+                            const Icon = FA[contact[key].icon];
+                            return (
+                                <a href="https://www.linkedin.com/in/byoigres" target="_blank" rel="noopener noreferrer">
+                                    <Icon />
+                                </a>
+                            )
+                        })
+                    }
+                </Social>
+            </Container>
+        </HeroBlock>
+    );
+};
 
-export default Hero;
+const query = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+                contact {
+                    twitter {
+                        icon
+                        link
+                    }
+                    linkedin {
+                        icon
+                        link
+                    }
+                    github {
+                        icon
+                        link
+                    }
+                    email {
+                        icon
+                        link
+                    }
+                }
+            }
+        }
+        backgroundImage: file(relativePath: { regex: "/background.jpg/" }) {
+            childImageSharp {
+                resize(width: 1280, height: 720) {
+                    src
+                }
+            }
+        }
+    }
+`
+
+export default () => (
+    <StaticQuery
+        query={query}
+        render={data => {
+            const {
+                site: {
+                    siteMetadata: {
+                        title,
+                        contact
+                    }
+                },
+                backgroundImage: {
+                    childImageSharp: {
+                        resize: {
+                            src: backgroundImage
+                        }
+                    }
+                }
+            } = data;
+
+            const props = {
+                title,
+                backgroundImage,
+                contact
+            };
+            // backgroundImage.childImageSharp.resize.src
+            return (
+                <Hero { ...props } />
+            );
+        }}
+    />
+);
