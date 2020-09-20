@@ -17,12 +17,24 @@ const FullPageContainer = styled.div`
   color: white;
   display: flex;
   justify-content: center;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
 `
 
 const Page = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 3;
 `
 
 const Content = styled.div`
@@ -80,6 +92,7 @@ const BackgroundCredits = styled.div`
   position: absolute;
   bottom: 10px;
   right: 10px;
+  z-index: 4;
 
   a {
     color: white;
