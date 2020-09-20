@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import FullPageLayout from "../layouts/FullPageLayout"
 import SEO from "../components/SEO"
 import Navbar from "../components/NavBar"
+import ExternalLink from "../components/ExternalLink"
 
 const FullPageContainer = styled.div`
   width: 100%;
@@ -110,11 +111,13 @@ const IndexPage = () => (
       </Page>
       <BackgroundCredits>
         Background by{" "}
-        <a href="https://www.reddit.com/user/cryptodesign/">u/cryptodesign</a>{" "}
+        <ExternalLink uri="https://www.reddit.com/user/cryptodesign/">
+          u/cryptodesign
+        </ExternalLink>{" "}
         from{" "}
-        <a href="https://www.reddit.com/r/EarthPorn/comments/8l9xbl/milky_way_coming_out_of_an_erupting_volcano/">
+        <ExternalLink uri="https://www.reddit.com/r/EarthPorn/comments/8l9xbl/milky_way_coming_out_of_an_erupting_volcano/">
           reddit
-        </a>
+        </ExternalLink>
       </BackgroundCredits>
     </FullPageContainer>
   </FullPageLayout>
