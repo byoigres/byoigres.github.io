@@ -106,7 +106,7 @@ const IndexPage = () => (
   <FullPageLayout>
     <SEO title="Home" />
     <FullPageContainer>
-      <Navbar />
+      <Navbar isTransparent />
       <Page>
         <Content>
           <Greetings>

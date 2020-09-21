@@ -9,7 +9,8 @@ const Header = styled.header`
   color: #fff;
   height: ${p => p.theme.navbar.height};
   max-height: ${p => p.theme.navbar.height};
-  background-color: transparent;
+  background-color: ${p =>
+    p.isTransparent ? "transparent" : p.theme.navbar.backgroundColor};
   opacity: 0.9;
 
   /* media-query */
@@ -83,8 +84,8 @@ const HeaderLinkLogo = styled(HeaderLink)`
   }
 `
 
-const NavBar = ({ isFullWidth }) => (
-  <Header>
+const NavBar = ({ isFullWidth, isTransparent }) => (
+  <Header isTransparent={isTransparent}>
     <Nav isFullWidth={isFullWidth}>
       <HeaderItemLogo>
         <HeaderLinkLogo to="/">SF</HeaderLinkLogo>

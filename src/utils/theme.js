@@ -2,6 +2,7 @@ import { rem } from "polished"
 
 const theme = {
   navbar: {
+    backgroundColor: "#191B1C",
     height: "4rem",
   },
   mediaWidth: "62rem",
@@ -17,9 +18,11 @@ const theme = {
     xl: rem("1439.999999px"),
   },
   colors: {
-    backgroundPrimary: "#191B1C",
+    // backgroundPrimary: "#191B1C",
+    backgroundPrimary: "#FFF",
     backgroundSecondary: "#2d2d2d",
-    body: "#e8e6e3",
+    // body: "#e8e6e3",
+    body: "#555",
     primary: "#4dc1ff",
     secondary: "#ef476f",
     selection: {
