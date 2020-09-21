@@ -25,12 +25,12 @@ const Header = styled.header`
 
 const Nav = styled.nav`
   color: white;
-  max-width: ${p => (p.isFullWidth ? "inherit" : p.theme.breakpoints.xl)};
+  max-width: ${p => (p.isFullWidth ? "inherit" : p.theme.breakpoints.lg)};
   flex: 1 0 auto;
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
-  height: ${p => p.theme.navbar.height};
+  height: calc(${p => p.theme.navbar.height} - 1rem);
   padding: 0.5rem;
 
   @media only screen and (max-width: 29.999rem) {
@@ -41,19 +41,22 @@ const Nav = styled.nav`
 const HeaderItem = styled.div`
   margin-left: 1rem;
   display: flex;
-  align-items: center;
+  align-items: stretch;
 `
 
 const HeaderLink = styled(Link)`
+  display: flex;
+  align-items: center;
   font-weight: 700;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
 
   &:hover {
+    border-top-color: white;
     border-bottom-color: white;
   }
 
@@ -74,13 +77,14 @@ const HeaderItemLogo = styled.h1`
 `
 
 const HeaderLinkLogo = styled(HeaderLink)`
+  display: block;
   font-weight: 700;
   font-size: 1.4rem;
   font-family: "Zilla Slab";
   width: 4rem;
 
   &:hover {
-    border-bottom-color: transparent;
+    border-color: transparent;
   }
 `
 
