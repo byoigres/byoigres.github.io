@@ -13,8 +13,44 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `remark`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              markdownCaptions: true,
+            },
+          },
+          {
+            resolve: "gatsby-remark-smartypants",
+            options: {
+              dashes: "oldschool",
+            },
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow noopener noreferrer",
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -26,6 +62,9 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
+          {
+            family: `Asar`,
+          },
           {
             family: `Merriweather:ital,wght`,
             variants: [`300`, `400`, `700`],

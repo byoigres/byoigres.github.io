@@ -6,10 +6,20 @@ import SEO from "../components/SEO"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="About me" />
+    <h1>A liitle bit about me</h1>
+    <p>
+      Hello, my name is Sergio, I'm a Software Developer from Mexico with 10
+      years of expertise working with different programming languages.
+    </p>
+    <h2>What are my development skills?</h2>
+    <p>
+      These last two years I been working in depth with node.js building backend
+      services (API's and server-side services)
+    </p>
+    <ul>
+      <li>Javascript</li>
+    </ul>
   </Layout>
 )
 

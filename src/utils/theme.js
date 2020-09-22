@@ -32,11 +32,12 @@ const theme = {
   },
   fonts: {
     families: {
-      body: "Merriweather",
+      // body: "Merriweather",
+      body: "Asar",
       logo: "Zilla Slab",
     },
     sizes: {
-      base: "18px",
+      base: "22px",
       medium: "14px",
       small: "12px",
     },

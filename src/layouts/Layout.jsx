@@ -7,15 +7,19 @@ import Navbar from "../components/NavBar"
 
 const Page = styled.div`
   margin-top: ${p => p.theme.navbar.height};
+  /*
   background-color: red;
+  */
   display: flex;
   justify-content: center;
 `
 
 const Content = styled.div`
+  /*
   background-color: blue;
+  */
   width: 100%;
-  max-width: ${p => p.theme.breakpoints.xl};
+  max-width: ${p => p.theme.breakpoints.lg};
 `
 
 const MainLayout = ({ children }) => (
