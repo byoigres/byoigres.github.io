@@ -33,7 +33,7 @@ const theme = {
   fonts: {
     families: {
       // body: "Merriweather",
-      body: "Asar",
+      body: "Poppins",
       logo: "Zilla Slab",
     },
     sizes: {

@@ -63,7 +63,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Asar`,
+            family: `Space Mono`,
           },
           {
             family: `Merriweather:ital,wght`,
@@ -72,6 +72,10 @@ module.exports = {
           {
             family: `Zilla Slab`,
             variants: [`300`, `400`, `700`],
+          },
+          {
+            family: `Poppins`,
+            variants: [`300`, `300i`, `500`, `500i`, `700`],
           },
         ],
       },

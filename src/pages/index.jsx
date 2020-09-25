@@ -78,7 +78,7 @@ const LinkButton = styled(Link)`
   border: 2px solid white;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 15px;
   font-size: 0.8rem;
   background-color: transparent;
 
@@ -114,10 +114,10 @@ const IndexPage = () => (
             <Line />
             <Title>Sergio Flores</Title>
             <Line />
-            <SubText>I am a Software/Web Developer</SubText>
+            <SubText>I build things for fun</SubText>
           </Greetings>
           <Links>
-            <LinkButton to="/about-me">About me</LinkButton>
+            <LinkButton to="/a-liitle-bit-about-me">About me</LinkButton>
             <LinkButton to="/contact-me">Projects</LinkButton>
           </Links>
         </Content>
