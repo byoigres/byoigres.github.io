@@ -98,7 +98,7 @@ const NavBar = ({ isFullWidth, isTransparent }) => (
         <HeaderLink to="/about-me/">About me</HeaderLink>
       </HeaderItem>
       <HeaderItem>
-        <HeaderLink to="/contacto/">Contact me</HeaderLink>
+        <HeaderLink to="/contact-me/">Contact me</HeaderLink>
       </HeaderItem>
     </Nav>
   </Header>

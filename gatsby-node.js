@@ -32,7 +32,6 @@ exports.createPages = ({ graphql, actions }) => {
                 description
                 path
                 layout
-                cover
               }
             }
           }

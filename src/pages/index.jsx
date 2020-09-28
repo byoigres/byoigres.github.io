@@ -10,8 +10,7 @@ import ExternalLink from "../components/ExternalLink"
 const FullPageContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: url(https://i.redd.it/xob7iy25rez01.jpg) no-repeat center center
-    fixed;
+  background: url(/xob7iy25rez01.jpg) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
   color: white;

@@ -46,19 +46,25 @@ body {
 }
 
 ::-webkit-scrollbar {
+  /*
   background-color: ${p => p.theme.colors.backgroundPrimary};
+  */
+  background-color: #191B1C;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: ${p => p.theme.colors.primary};
+  /*
+  background-color: ${p => p.theme.colors.selection.background};
+  */
+  background-color: white;
 }
 
 ::selection {
-  background-color: ${p => p.theme.colors.selection.background} !important;
-  color: ${p => p.theme.colors.selection.text} !important;
+  background-color: ${p => p.theme.colors.selection.background};
+  color: ${p => p.theme.colors.selection.text};
 }
 ::-moz-selection {
-  background-color: ${p => p.theme.colors.selection.background} !important;
-  color: ${p => p.theme.colors.selection.text} !important;
+  background-color: ${p => p.theme.colors.selection.background};
+  color: ${p => p.theme.colors.selection.text};
 }
 `
 

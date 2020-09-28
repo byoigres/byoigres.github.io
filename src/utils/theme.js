@@ -26,8 +26,8 @@ const theme = {
     primary: "#4dc1ff",
     secondary: "#ef476f",
     selection: {
-      background: "#ffd166",
-      text: "#e8e6e3",
+      background: "#555",
+      text: "#f5f5f5",
     },
   },
   fonts: {

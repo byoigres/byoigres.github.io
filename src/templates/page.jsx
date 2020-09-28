@@ -7,6 +7,7 @@ import SEO from "../components/SEO"
 const Markdown = styled.div`
   p {
     line-height: 1.5;
+    text-align: justify;
     font-size: 1.125rem;
   }
 
@@ -22,6 +23,15 @@ const Markdown = styled.div`
 
   h2 code {
     font-size: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 
@@ -64,7 +74,6 @@ export const pageQuery = graphql`
         date
         description
         path
-        cover
       }
     }
   }
