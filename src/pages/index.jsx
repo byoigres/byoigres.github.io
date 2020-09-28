@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+import media from "../utils/media-query"
 import FullPageLayout from "../layouts/FullPageLayout"
 import SEO from "../components/SEO"
 import Navbar from "../components/NavBar"
@@ -77,9 +78,13 @@ const LinkButton = styled(Link)`
   border: 2px solid white;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px;
+  padding: 1rem;
   font-size: 0.8rem;
   background-color: transparent;
+
+  ${media.lessThan("md")`
+      padding: 0.5rem
+  `}
 
   &:hover {
     color: black;
@@ -116,8 +121,7 @@ const IndexPage = () => (
             <SubText>I build things for fun</SubText>
           </Greetings>
           <Links>
-            <LinkButton to="/a-liitle-bit-about-me">About me</LinkButton>
-            <LinkButton to="/contact-me">Projects</LinkButton>
+            <LinkButton to="/about-me">About me</LinkButton>
           </Links>
         </Content>
       </Page>

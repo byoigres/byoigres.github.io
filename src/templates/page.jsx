@@ -3,6 +3,15 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../layouts/Layout"
 import SEO from "../components/SEO"
+import media from "../utils/media-query"
+
+const Container = styled.div`
+  margin: 0 1rem;
+
+  ${media.lessThan("sm")`
+    margin: 0 0.5rem;
+  `}
+`
 
 const Markdown = styled.div`
   p {
@@ -51,11 +60,13 @@ class PageTemplate extends React.Component {
     return (
       <Layout>
         <SEO title={post.frontmatter.title} />
-        <h1>{post.frontmatter.title}</h1>
-        <Markdown
-          /* eslint react/no-danger: 0 */
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <Container>
+          <h1>{post.frontmatter.title}</h1>
+          <Markdown
+            /* eslint react/no-danger: 0 */
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </Container>
       </Layout>
     )
   }
