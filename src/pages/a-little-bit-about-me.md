@@ -6,7 +6,7 @@ creation_date: "2020-09-25T11:13:00.00Z"
 description: A brief of my story into tech
 categories: me
 author: sergio
-path: "/a-liitle-bit-about-me/"
+path: "/a-little-bit-about-me/"
 draft: true
 ---
 
