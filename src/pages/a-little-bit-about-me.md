@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A little about me"
+title: "A little bit about me"
 date: "2020-09-25T11:13:00.00Z"
 creation_date: "2020-09-25T11:13:00.00Z"
 description: A brief of my story into tech
